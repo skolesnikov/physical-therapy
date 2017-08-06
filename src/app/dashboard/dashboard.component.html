@@ -1,0 +1,37 @@
+<div class='panel panel-default'>
+    <div class='panel-heading'>
+        Patients
+    </div>
+
+    <div class='panel-body'>
+        <div class='row'>
+            <div class='col-md-12'>
+                <input type='text' [(ngModel)]='listFilter' class="form-control" placeholder="Filter" />
+            </div>
+        </div>
+
+        <div class='has-error' *ngIf='errorMessage'>{{errorMessage}}</div>
+
+        <div class='table-responsive'>
+            <table class='table table-striped'
+                   *ngIf='patients && patients.length'>
+                <thead>
+                    <tr>
+                        <th>Patient</th>
+                        <th>Last Visit Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor='let patient of patients | patientFilter:listFilter'>
+                        <td>
+                            <a [routerLink]="['/patient', patient.id]">
+                                {{patient.lastName}},&nbsp;{{patient.firstName}}
+                            </a>
+                        </td>
+                        <td>{{ patient.lastVisitDate | date:'fullDate' }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

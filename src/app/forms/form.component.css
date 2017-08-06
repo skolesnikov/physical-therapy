@@ -1,0 +1,62 @@
+label.subHeader {
+    text-transform: uppercase;
+    text-decoration: underline;
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+}
+
+label.section {
+    font-weight: bold;
+    display: block;
+    margin-top: 20px;
+}
+
+span.section {
+    font-weight: bold;
+}
+
+input[type=checkbox] + span {
+  text-decoration: none;
+} 
+
+input[type=checkbox]:checked + span {
+  text-decoration: underline;
+} 
+
+.checkbox label {
+    padding-right: 10px;
+}
+
+label.inline{
+    display: inline; 
+    margin-right: 10px; 
+}
+
+div.group {
+    display: inline; 
+    white-space: nowrap;
+}
+
+.multiline {
+    white-space: pre-wrap;
+}
+
+.marginalized {
+    margin-top: 20px;
+}
+
+.h4label {
+    padding-top: 7px;
+} 
+
+label.signature {
+  font-weight: bold;
+  border: 0px;
+  border-top: 1px solid black;
+  margin-top: 80px;
+}
+
+.printPreview {
+    font-size: large;
+}

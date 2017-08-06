@@ -1,0 +1,36 @@
+<nav>
+    <ol class="breadcrumb panel panel-default">
+        <li><a href="" [routerLink]="['/dashboard']">Patients</a></li>
+        <li class="active" *ngIf="patient">{{patient.firstName}} {{patient.lastName}}</li>
+    </ol>
+</nav>
+
+<div class="panel panel-default" *ngIf="patient">
+    <div class="panel-heading">
+        {{patient.firstName + " " + patient.lastName}}
+    </div>
+
+    <div class="panel-body">
+        <div *ngFor='let form of forms | formFilter:patient.id '>
+            <a [routerLink]="['/form-' + form.formTypeId + '-edit', form.id]">
+                {{form.formTypeName}} : {{form.formDate | date:'fullDate'}}
+            </a>            
+        </div>
+
+        <div *ngIf='!(forms && forms.length)'>No records</div>
+
+        <div class='has-error' *ngIf='errorMessage'>{{errorMessage}}</div>
+    </div>
+
+    <div class="panel-footer">
+        <a class="btn btn-default" (click)="onBack()">
+            <i class="glyphicon glyphicon-chevron-left"></i> Back
+        </a>
+        <a class="btn btn-primary" (click)="onAdd(1)">
+            <i class="glyphicon glyphicon-plus"></i> Neck/UB
+        </a>
+        <a class="btn btn-primary" (click)="onAdd(2)">
+            <i class="glyphicon glyphicon-plus"></i> Low Back
+        </a>
+    </div>
+</div>
