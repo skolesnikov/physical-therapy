@@ -54,9 +54,9 @@ label.signature {
   font-weight: bold;
   border: 0px;
   border-top: 1px solid black;
-  margin-top: 80px;
+  margin-top: 60px;
 }
 
 .printPreview {
-    font-size: 110%;
+    font-size: 14px;;
 }
