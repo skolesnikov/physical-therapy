@@ -19,6 +19,7 @@ import { FormFilterPipe } from '../pipes/form-filter.pipe';
 import { DatepickerModule } from 'ngx-bootstrap/datepicker';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { AlertModule } from 'ngx-bootstrap/alert';
+import { TypeaheadModule } from 'ngx-bootstrap/typeahead';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { AlertModule } from 'ngx-bootstrap/alert';
     AppRoutingModule,
     DatepickerModule.forRoot(),
     ModalModule.forRoot(),
-    AlertModule.forRoot()
+    AlertModule.forRoot(),
+    TypeaheadModule.forRoot()
   ],
   providers: [
     PatientService,

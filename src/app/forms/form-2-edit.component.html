@@ -619,14 +619,13 @@
                             <label>Patient:</label>
                         </div>
                         <div class="col-md-10">
-                            <select [(ngModel)]="clonedPatientId" name="clonedPatientId" class="form-control">
-                                <option *ngFor="let clone of patients" [value]="clone.id" [selected]="clone.id == clonedPatientId">{{clone.lastName}}, {{clone.firstName}}</option>
-                            </select> 
+                            <input [(ngModel)]="clonedPatientName" name="clonedPatientName"
+                                [typeahead]="patientNames" class="form-control">
                         </div>
                     </div>   
                 </div>
                 <div class="modal-footer">
-                    <a class="btn btn-primary" (click)="cloneForm();cloneModal.hide();">Clone</a>
+                    <a class="btn btn-primary" (click)="cloneForm();cloneModal.hide();" *ngIf="patients && getPatientId(clonedPatientName, patients)">Clone</a>
                     <a class="btn btn-default" (click)="cloneModal.hide()">Cancel</a>
                 </div>
             </div>
