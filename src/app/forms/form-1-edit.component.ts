@@ -95,10 +95,12 @@ export class FormOneEditComponent implements OnInit, OnDestroy {
     }
 
     getPatientId(patientName: string, patients: IPatient[]) {
-        for(var i = 0; i < patients.length; i++) {
-            if (this.getPatientName(patients[i]) == patientName) 
-                return patients[i].id;
-        }
+        if (patients) {
+           for(var i = 0; i < patients.length; i++) {
+                if (this.getPatientName(patients[i]) == patientName) 
+                    return patients[i].id;
+                } 
+        }                    
         return null;
     }
 

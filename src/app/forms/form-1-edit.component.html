@@ -728,7 +728,7 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <a class="btn btn-primary" (click)="cloneForm();cloneModal.hide();" *ngIf="patients && getPatientId(clonedPatientName, patients)">Clone</a>
+                    <a class="btn btn-primary" (click)="cloneForm();cloneModal.hide();" *ngIf="getPatientId(clonedPatientName, patients)">Clone</a>
                     <a class="btn btn-default" (click)="cloneModal.hide()">Cancel</a>
                 </div>
             </div>
