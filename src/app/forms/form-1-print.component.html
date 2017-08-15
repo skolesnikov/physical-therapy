@@ -343,6 +343,15 @@
             </div>
             
             <div *ngIf="form.questions[220].answer" class="multiline">{{form.questions[220].answer}}</div>
+
+            <label *ngIf="getCheckedQuestions(form.questions.slice(328, 347)) || form.questions[347].answer"
+                class="section">Therapeutic exercises:</label>
+            
+            <div *ngIf="getCheckedQuestions(form.questions.slice(328, 347))">
+                {{getCheckedQuestions(form.questions.slice(328, 347))}}
+            </div>
+            
+            <div *ngIf="form.questions[347].answer" class="multiline">{{form.questions[347].answer}}</div>
             
             <label *ngIf="getCheckedQuestions(form.questions.slice(221, 231)) || form.questions[231].answer"
                 class="section">Kinetic/functional activities:</label>

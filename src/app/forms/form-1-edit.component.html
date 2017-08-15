@@ -516,6 +516,19 @@
                 <textarea class="form-control" rows="3" name="q220" [(ngModel)]="form.questions[220].answer"></textarea>
             </div>
 
+            <label class="section">Therapeutic exercises:</label>
+
+            <div class="checkbox">
+                <label *ngFor="let question of form.questions.slice(328, 347)">
+                    <input type="checkbox" name="{{'q' + question.index}}" [(ngModel)]="question.checked"> 
+                    <span>{{question.question}}</span>
+                </label>
+            </div>
+
+            <div class="form-group">
+                <textarea class="form-control" rows="3" name="q347" [(ngModel)]="form.questions[347].answer"></textarea>
+            </div>
+
             <label class="section">Kinetic/functional activities:</label>
 
             <div class="checkbox">
