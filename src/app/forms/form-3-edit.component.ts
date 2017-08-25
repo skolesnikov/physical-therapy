@@ -1,11 +1,8 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Router, ActivatedRoute, NavigationEnd } from '@angular/router';
-
 import { Subscription } from 'rxjs/Subscription';
-
 import { IPatient } from '../../models/patient';
 import { IForm } from '../../models/form';
-
 import { PatientService } from '../../services/patient.service';
 import { FormService } from '../../services/form.service';
 
@@ -15,10 +12,11 @@ import { FormService } from '../../services/form.service';
 })
 export class FormThreeEditComponent implements OnInit, OnDestroy {
     form: IForm;
-    clonedDate: Date;
-    clonedPatientId: string;
     patient: IPatient;
     patients: IPatient[];
+    patientNames: string[] = [];
+    clonedDate: Date;
+    clonedPatientName: string;   
     errorMessage: string;
     showDatePicker: boolean;
     showClonedDatePicker: boolean;
@@ -47,8 +45,9 @@ export class FormThreeEditComponent implements OnInit, OnDestroy {
         }); 
 
         this.patientService.getPatients()
-                .subscribe(patients => this.patients = patients,
-                           error => this.errorMessage = <any>error);
+                .subscribe(patients => { this.patients = patients,
+                            this.getPatientNames(patients)},
+                            error => this.errorMessage = <any>error);
             
         this.router.events.subscribe((evt) => {
             if (!(evt instanceof NavigationEnd)) {
@@ -76,13 +75,31 @@ export class FormThreeEditComponent implements OnInit, OnDestroy {
         }        
     }
 
-    getPatient(id: string) {
+     getPatient(id: string) {
         this.patientService.getPatient(id).subscribe(
-            patient => {this.patient = patient;
-                this.clonedPatientId = patient.id},
+            patient => {
+                this.patient = patient;
+                this.clonedPatientName = this.getPatientName(patient) 
+            },
             error => this.errorMessage = <any>error);
+    }  
+        getPatientNames(patients: IPatient[]) {
+        for(var i = 0; i < patients.length; i++) {
+            this.patientNames.push(this.getPatientName(patients[i]));
+        }
     }
-
+    getPatientName(patient: IPatient) {
+        return patient.lastName + ", " + patient.firstName;
+    }
+    getPatientId(patientName: string, patients: IPatient[]) {
+        if (patients) {
+           for(var i = 0; i < patients.length; i++) {
+                if (this.getPatientName(patients[i]) == patientName) 
+                    return patients[i].id;
+                } 
+        }                    
+        return null;
+    }
     saveForm(): void {
         this.alerts.push({
             type: 'info',
@@ -99,7 +116,7 @@ export class FormThreeEditComponent implements OnInit, OnDestroy {
     cloneForm(): void {
         this.form.id = 0;
         this.form.formDate = this.clonedDate;
-        this.form.patientId = this.clonedPatientId;
+        this.form.patientId = this.getPatientId(this.clonedPatientName, this.patients);
         this.patient = null;
 
         this.alerts.push({
@@ -107,7 +124,7 @@ export class FormThreeEditComponent implements OnInit, OnDestroy {
             msg: `Record has been cloned`,
             timeout: 3000
         });
-
+        
         this.formService.saveForm(this.form)
             .subscribe(
                 form => {this.router.navigate([`/form-3-edit/${form.id}`]);},
