@@ -75,22 +75,25 @@ export class FormThreeEditComponent implements OnInit, OnDestroy {
         }        
     }
 
-     getPatient(id: string) {
+    getPatient(id: string) {
         this.patientService.getPatient(id).subscribe(
             patient => {
                 this.patient = patient;
                 this.clonedPatientName = this.getPatientName(patient) 
             },
             error => this.errorMessage = <any>error);
-    }  
-        getPatientNames(patients: IPatient[]) {
+    }
+
+    getPatientNames(patients: IPatient[]) {
         for(var i = 0; i < patients.length; i++) {
             this.patientNames.push(this.getPatientName(patients[i]));
         }
     }
+
     getPatientName(patient: IPatient) {
         return patient.lastName + ", " + patient.firstName;
     }
+
     getPatientId(patientName: string, patients: IPatient[]) {
         if (patients) {
            for(var i = 0; i < patients.length; i++) {
@@ -100,6 +103,7 @@ export class FormThreeEditComponent implements OnInit, OnDestroy {
         }                    
         return null;
     }
+    
     saveForm(): void {
         this.alerts.push({
             type: 'info',
