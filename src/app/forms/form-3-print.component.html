@@ -11,152 +11,275 @@
 
     <label class="subHeader">Subjective:</label>
 
-    <label *ngIf="getCheckedQuestions(form.questions.slice(0, 34)) || form.questions[34].answer"
+    <label *ngIf="getCheckedQuestions(form.questions.slice(0, 40)) || form.questions[40].answer"
         class="section">Pain:</label>    
 
-    <div *ngIf="getCheckedQuestions(form.questions.slice(0, 34))">{{getCheckedQuestions(form.questions.slice(0, 34))}}</div>
+    <div *ngIf="getCheckedQuestions(form.questions.slice(0, 40))">{{getCheckedQuestions(form.questions.slice(0, 40))}}</div>
 
-    <div *ngIf="form.questions[34].answer" class="multiline">{{form.questions[34].answer}}</div>
+    <div *ngIf="form.questions[40].answer" class="multiline">{{form.questions[40].answer}}</div>
 
-    <label *ngIf="getCheckedQuestions(form.questions.slice(35, 59)) || form.questions[59].answer"
+    <label *ngIf="getCheckedQuestions(form.questions.slice(41, 68)) || form.questions[68].answer"
         class="section">Function:</label>    
 
-    <div *ngIf="getCheckedQuestions(form.questions.slice(35, 59))">{{getCheckedQuestions(form.questions.slice(35, 59))}}</div>
+    <div *ngIf="getCheckedQuestions(form.questions.slice(41, 68))">{{getCheckedQuestions(form.questions.slice(41, 68))}}</div>
 
-    <div *ngIf="form.questions[59].answer" class="multiline">{{form.questions[59].answer}}</div>
+    <div *ngIf="form.questions[68].answer" class="multiline">{{form.questions[68].answer}}</div>
 
     <label class="subHeader">Objective:</label>
 
-    <label *ngIf="form.questions[60].checked" class="section">{{form.questions[60].question}}</label>
+    <label *ngIf="form.questions[69].checked" class="section">{{form.questions[69].question}}</label>
 
-    <div *ngIf="form.questions[60].answer" class="multiline">{{form.questions[60].answer}}</div>
+    <div *ngIf="form.questions[69].answer" class="multiline">{{form.questions[69].answer}}</div>
 
-    <label *ngIf="getCheckedQuestions(form.questions.slice(61, 85)) || form.questions[85].answer" class="section">STM/MFR:</label>
+    <label *ngIf="getCheckedQuestions(form.questions.slice(70, 112)) || form.questions[112].answer" class="section">STM/MFR:</label>
 
     <div>
-        <span *ngIf="getCheckedQuestions(form.questions.slice(61, 64))">
-            <span *ngIf="form.questions[61].checked">{{form.questions[61].question}}</span><span *ngIf="getCheckedQuestions(form.questions.slice(62, 64))"> ({{getCheckedQuestions(form.questions.slice(62, 64))}})</span>
-        </span>
-
-        <span *ngIf="getCheckedQuestions(form.questions.slice(64, 67))">
-            <span *ngIf="form.questions[64].checked">{{form.questions[64].question}}</span><span *ngIf="getCheckedQuestions(form.questions.slice(65, 67))"> ({{getCheckedQuestions(form.questions.slice(65, 67))}})</span><span *ngIf="getCheckedQuestions(form.questions.slice(67, 85))">,</span>
-        </span>
-
-        <span *ngIf="getCheckedQuestions(form.questions.slice(67, 70))">
-            <span *ngIf="form.questions[67].checked">{{form.questions[67].question}}</span><span *ngIf="getCheckedQuestions(form.questions.slice(68, 70))"> ({{getCheckedQuestions(form.questions.slice(68, 70))}})</span><span *ngIf="getCheckedQuestions(form.questions.slice(70, 85))">,</span>
-        </span>
-
         <span *ngIf="getCheckedQuestions(form.questions.slice(70, 73))">
-            <span *ngIf="form.questions[70].checked">{{form.questions[70].question}}</span><span *ngIf="getCheckedQuestions(form.questions.slice(71, 73))"> ({{getCheckedQuestions(form.questions.slice(71, 73))}})</span><span *ngIf="getCheckedQuestions(form.questions.slice(73, 85))">,</span>
+            <span *ngIf="form.questions[70].checked">{{form.questions[70].question}}</span>
+            <span *ngIf="getCheckedQuestions(form.questions.slice(71, 73))"> ({{getCheckedQuestions(form.questions.slice(71, 73))}})</span>
         </span>
 
         <span *ngIf="getCheckedQuestions(form.questions.slice(73, 76))">
-            <span *ngIf="form.questions[73].checked">{{form.questions[73].question}}</span><span *ngIf="getCheckedQuestions(form.questions.slice(74, 76))"> ({{getCheckedQuestions(form.questions.slice(74, 76))}})</span><span *ngIf="getCheckedQuestions(form.questions.slice(76, 85))">,</span>
+            <span *ngIf="form.questions[73].checked">{{form.questions[73].question}}</span>
+            <span *ngIf="getCheckedQuestions(form.questions.slice(74, 76))"> ({{getCheckedQuestions(form.questions.slice(74, 76))}})</span>
+            <span *ngIf="getCheckedQuestions(form.questions.slice(76, 112))">,</span>
         </span>
 
         <span *ngIf="getCheckedQuestions(form.questions.slice(76, 79))">
-            <span *ngIf="form.questions[76].checked">{{form.questions[76].question}}</span><span *ngIf="getCheckedQuestions(form.questions.slice(77, 79))"> ({{getCheckedQuestions(form.questions.slice(77, 79))}})</span><span *ngIf="getCheckedQuestions(form.questions.slice(79, 85))">,</span>
+            <span *ngIf="form.questions[76].checked">{{form.questions[76].question}}</span>
+            <span *ngIf="getCheckedQuestions(form.questions.slice(77, 79))"> ({{getCheckedQuestions(form.questions.slice(77, 79))}})</span>
+            <span *ngIf="getCheckedQuestions(form.questions.slice(79, 112))">,</span>
         </span>
 
         <span *ngIf="getCheckedQuestions(form.questions.slice(79, 82))">
-            <span *ngIf="form.questions[79].checked">{{form.questions[79].question}}</span><span *ngIf="getCheckedQuestions(form.questions.slice(80, 82))"> ({{getCheckedQuestions(form.questions.slice(80, 82))}})</span><span *ngIf="getCheckedQuestions(form.questions.slice(82, 85))">,</span>
+            <span *ngIf="form.questions[79].checked">{{form.questions[79].question}}</span>
+            <span *ngIf="getCheckedQuestions(form.questions.slice(80, 82))"> ({{getCheckedQuestions(form.questions.slice(80, 82))}})</span>
+            <span *ngIf="getCheckedQuestions(form.questions.slice(82, 112))">,</span>
         </span>
 
         <span *ngIf="getCheckedQuestions(form.questions.slice(82, 85))">
-            <span *ngIf="form.questions[82].checked">{{form.questions[82].question}}</span><span *ngIf="getCheckedQuestions(form.questions.slice(83, 85))"> ({{getCheckedQuestions(form.questions.slice(83, 85))}})</span>
+            <span *ngIf="form.questions[82].checked">{{form.questions[82].question}}</span>
+            <span *ngIf="getCheckedQuestions(form.questions.slice(83, 85))"> ({{getCheckedQuestions(form.questions.slice(83, 85))}})</span>
+            <span *ngIf="getCheckedQuestions(form.questions.slice(85, 112))">,</span>
         </span>
 
-        <div *ngIf="form.questions[85].answer" class="multiline">{{form.questions[85].answer}}</div>
+        <span *ngIf="getCheckedQuestions(form.questions.slice(85, 88))">
+            <span *ngIf="form.questions[85].checked">{{form.questions[85].question}}</span>
+            <span *ngIf="getCheckedQuestions(form.questions.slice(86, 88))"> ({{getCheckedQuestions(form.questions.slice(86, 88))}})</span>
+            <span *ngIf="getCheckedQuestions(form.questions.slice(88, 112))">,</span>
+        </span>
+
+        <span *ngIf="getCheckedQuestions(form.questions.slice(88, 91))">
+            <span *ngIf="form.questions[88].checked">{{form.questions[88].question}}</span>
+            <span *ngIf="getCheckedQuestions(form.questions.slice(89, 91))"> ({{getCheckedQuestions(form.questions.slice(89, 91))}})</span>
+                <span *ngIf="getCheckedQuestions(form.questions.slice(91, 112))">,</span>
+        </span>
+
+        <span *ngIf="getCheckedQuestions(form.questions.slice(91, 94))">
+            <span *ngIf="form.questions[91].checked">{{form.questions[91].question}}</span>
+            <span *ngIf="getCheckedQuestions(form.questions.slice(92, 94))"> ({{getCheckedQuestions(form.questions.slice(92, 94))}})</span>
+            <span *ngIf="getCheckedQuestions(form.questions.slice(94, 112))">,</span>
+        </span>
+
+        <span *ngIf="getCheckedQuestions(form.questions.slice(94, 97))">
+            <span *ngIf="form.questions[94].checked">{{form.questions[94].question}}</span>
+            <span *ngIf="getCheckedQuestions(form.questions.slice(95, 97))"> ({{getCheckedQuestions(form.questions.slice(95, 97))}})</span>
+            <span *ngIf="getCheckedQuestions(form.questions.slice(97, 112))">,</span>
+        </span>
+
+        <span *ngIf="getCheckedQuestions(form.questions.slice(97, 100))">
+            <span *ngIf="form.questions[97].checked">{{form.questions[97].question}}</span>
+            <span *ngIf="getCheckedQuestions(form.questions.slice(98, 100))"> ({{getCheckedQuestions(form.questions.slice(98, 100))}})</span>
+            <span *ngIf="getCheckedQuestions(form.questions.slice(100, 112))">,</span>
+        </span>
+
+        <span *ngIf="getCheckedQuestions(form.questions.slice(100, 103))">
+            <span *ngIf="form.questions[100].checked">{{form.questions[100].question}}</span>
+            <span *ngIf="getCheckedQuestions(form.questions.slice(101, 103))"> ({{getCheckedQuestions(form.questions.slice(101, 103))}})</span>
+            <span *ngIf="getCheckedQuestions(form.questions.slice(103, 112))">,</span>
+        </span>
+
+        <span *ngIf="getCheckedQuestions(form.questions.slice(103, 106))">
+            <span *ngIf="form.questions[103].checked">{{form.questions[103].question}}</span>
+            <span *ngIf="getCheckedQuestions(form.questions.slice(104, 106))"> ({{getCheckedQuestions(form.questions.slice(104,106))}})</span>
+            <span *ngIf="getCheckedQuestions(form.questions.slice(106, 112))">,</span>
+        </span>
+
+        <span *ngIf="getCheckedQuestions(form.questions.slice(106, 109))">
+            <span *ngIf="form.questions[106].checked">{{form.questions[106].question}}</span>
+            <span *ngIf="getCheckedQuestions(form.questions.slice(107, 109))"> ({{getCheckedQuestions(form.questions.slice(107, 109))}})</span>
+            <span *ngIf="getCheckedQuestions(form.questions.slice(109, 112))">,</span>
+        </span>
+
+        <span *ngIf="getCheckedQuestions(form.questions.slice(109, 112))">
+            <span *ngIf="form.questions[109].checked">{{form.questions[109].question}}</span>
+            <span *ngIf="getCheckedQuestions(form.questions.slice(110, 112))"> ({{getCheckedQuestions(form.questions.slice(110, 112))}})</span>
+        </span>
+
+        <div *ngIf="form.questions[112].answer" class="multiline">{{form.questions[112].answer}}</div>
         
-        <label *ngIf="getCheckedQuestions(form.questions.slice(86, 128)) || form.questions[128].answer" class="section">NMT (MTrP/ischaemic bands release):</label>
+        <label *ngIf="getCheckedQuestions(form.questions.slice(113, 173)) || form.questions[173].answer" class="section">NMT (MTrP/ischaemic bands release):</label>
 
         <div>
-            <span *ngIf="getCheckedQuestions(form.questions.slice(86, 89))">
-                <span *ngIf="form.questions[86].checked">{{form.questions[86].question}}</span><span *ngIf="getCheckedQuestions(form.questions.slice(87, 89))"> ({{getCheckedQuestions(form.questions.slice(87, 89))}})</span>
-            </span>
-
-            <span *ngIf="getCheckedQuestions(form.questions.slice(89, 92))">
-                <span *ngIf="form.questions[89].checked">{{form.questions[89].question}}</span><span *ngIf="getCheckedQuestions(form.questions.slice(90, 92))"> ({{getCheckedQuestions(form.questions.slice(90, 92))}})</span><span *ngIf="getCheckedQuestions(form.questions.slice(92, 128))">,</span>
-            </span>
-
-            <span *ngIf="getCheckedQuestions(form.questions.slice(92, 95))">
-                <span *ngIf="form.questions[92].checked">{{form.questions[92].question}}</span><span *ngIf="getCheckedQuestions(form.questions.slice(93, 95))"> ({{getCheckedQuestions(form.questions.slice(93, 95))}})</span><span *ngIf="getCheckedQuestions(form.questions.slice(95, 128))">,</span>
-            </span>
-
-            <span *ngIf="getCheckedQuestions(form.questions.slice(95, 98))">
-                <span *ngIf="form.questions[95].checked">{{form.questions[95].question}}</span><span *ngIf="getCheckedQuestions(form.questions.slice(96, 98))"> ({{getCheckedQuestions(form.questions.slice(96, 98))}})</span><span *ngIf="getCheckedQuestions(form.questions.slice(98, 128))">,</span>
-            </span>
-
-            <span *ngIf="getCheckedQuestions(form.questions.slice(98, 101))">
-                <span *ngIf="form.questions[98].checked">{{form.questions[98].question}}</span><span *ngIf="getCheckedQuestions(form.questions.slice(99, 101))"> ({{getCheckedQuestions(form.questions.slice(99, 101))}})</span><span *ngIf="getCheckedQuestions(form.questions.slice(101, 128))">,</span>
-            </span>
-
-            <span *ngIf="getCheckedQuestions(form.questions.slice(101, 104))">
-                <span *ngIf="form.questions[101].checked">{{form.questions[101].question}}</span><span *ngIf="getCheckedQuestions(form.questions.slice(102, 104))"> ({{getCheckedQuestions(form.questions.slice(102, 104))}})</span><span *ngIf="getCheckedQuestions(form.questions.slice(104, 128))">,</span>
-            </span>
-
-            <span *ngIf="getCheckedQuestions(form.questions.slice(104, 107))">
-                <span *ngIf="form.questions[104].checked">{{form.questions[104].question}}</span><span *ngIf="getCheckedQuestions(form.questions.slice(105, 107))"> ({{getCheckedQuestions(form.questions.slice(105, 107))}})</span><span *ngIf="getCheckedQuestions(form.questions.slice(107, 128))">,</span>
-            </span>
-
-            <span *ngIf="getCheckedQuestions(form.questions.slice(107, 110))">
-                <span *ngIf="form.questions[107].checked">{{form.questions[107].question}}</span><span *ngIf="getCheckedQuestions(form.questions.slice(108, 110))"> ({{getCheckedQuestions(form.questions.slice(108, 110))}})</span><span *ngIf="getCheckedQuestions(form.questions.slice(110, 128))">,</span>
-            </span>
-
-            <span *ngIf="getCheckedQuestions(form.questions.slice(110, 113))">
-                <span *ngIf="form.questions[110].checked">{{form.questions[110].question}}</span><span *ngIf="getCheckedQuestions(form.questions.slice(111, 113))"> ({{getCheckedQuestions(form.questions.slice(111, 113))}})</span><span *ngIf="getCheckedQuestions(form.questions.slice(113, 128))">,</span>
-            </span>
-
             <span *ngIf="getCheckedQuestions(form.questions.slice(113, 116))">
-                <span *ngIf="form.questions[113].checked">{{form.questions[113].question}}</span><span *ngIf="getCheckedQuestions(form.questions.slice(114, 116))"> ({{getCheckedQuestions(form.questions.slice(114, 116))}})</span><span *ngIf="getCheckedQuestions(form.questions.slice(116, 128))">,</span>
+                <span *ngIf="form.questions[113].checked">{{form.questions[113].question}}</span>
+                <span *ngIf="getCheckedQuestions(form.questions.slice(114, 116))"> ({{getCheckedQuestions(form.questions.slice(114, 116))}})</span>
             </span>
 
             <span *ngIf="getCheckedQuestions(form.questions.slice(116, 119))">
-                <span *ngIf="form.questions[116].checked">{{form.questions[116].question}}</span><span *ngIf="getCheckedQuestions(form.questions.slice(117, 119))"> ({{getCheckedQuestions(form.questions.slice(117, 119))}})</span><span *ngIf="getCheckedQuestions(form.questions.slice(119, 128))">,</span>
+                <span *ngIf="form.questions[116].checked">{{form.questions[116].question}}</span>
+                <span *ngIf="getCheckedQuestions(form.questions.slice(117, 119))"> ({{getCheckedQuestions(form.questions.slice(117, 119))}})</span>
+                <span *ngIf="getCheckedQuestions(form.questions.slice(118, 173))">,</span>
             </span>
 
+
             <span *ngIf="getCheckedQuestions(form.questions.slice(119, 122))">
-                <span *ngIf="form.questions[119].checked">{{form.questions[119].question}}</span><span *ngIf="getCheckedQuestions(form.questions.slice(120, 122))"> ({{getCheckedQuestions(form.questions.slice(120, 122))}})</span><span *ngIf="getCheckedQuestions(form.questions.slice(122, 128))">,</span>
+                    <span *ngIf="form.questions[119].checked">{{form.questions[119].question}}</span>
+                    <span *ngIf="getCheckedQuestions(form.questions.slice(120, 122))"> ({{getCheckedQuestions(form.questions.slice(120, 122))}})</span>
+                    <span *ngIf="getCheckedQuestions(form.questions.slice(122, 173))">,</span>
             </span>
 
             <span *ngIf="getCheckedQuestions(form.questions.slice(122, 125))">
-                <span *ngIf="form.questions[122].checked">{{form.questions[122].question}}</span><span *ngIf="getCheckedQuestions(form.questions.slice(123, 125))"> ({{getCheckedQuestions(form.questions.slice(123, 125))}})</span><span *ngIf="getCheckedQuestions(form.questions.slice(125, 128))">,</span>
+                    <span *ngIf="form.questions[122].checked">{{form.questions[122].question}}</span>
+                    <span *ngIf="getCheckedQuestions(form.questions.slice(123, 125))"> ({{getCheckedQuestions(form.questions.slice(123, 125))}})</span>
+                    <span *ngIf="getCheckedQuestions(form.questions.slice(124, 173))">,</span>
             </span>
 
             <span *ngIf="getCheckedQuestions(form.questions.slice(125, 128))">
-                <span *ngIf="form.questions[125].checked">{{form.questions[125].question}}</span><span *ngIf="getCheckedQuestions(form.questions.slice(126, 128))"> ({{getCheckedQuestions(form.questions.slice(126, 128))}})</span>
+                    <span *ngIf="form.questions[125].checked">{{form.questions[125].question}}</span>
+                    <span *ngIf="getCheckedQuestions(form.questions.slice(126, 128))"> ({{getCheckedQuestions(form.questions.slice(126, 128))}})</span>
+                    <span *ngIf="getCheckedQuestions(form.questions.slice(127, 173))">,</span>
             </span>
 
-            <div *ngIf="form.questions[128].answer" class="multiline">{{form.questions[128].answer}}</div>
+            <span *ngIf="getCheckedQuestions(form.questions.slice(128, 131))">
+                    <span *ngIf="form.questions[128].checked">{{form.questions[128].question}}</span>
+                    <span *ngIf="getCheckedQuestions(form.questions.slice(129, 131))"> ({{getCheckedQuestions(form.questions.slice(129, 131))}})</span>
+                    <span *ngIf="getCheckedQuestions(form.questions.slice(130, 173))">,</span>
+            </span>
 
-            <label *ngIf="getCheckedQuestions(form.questions.slice(129, 133)) || form.questions[133].answer"
+            <span *ngIf="getCheckedQuestions(form.questions.slice(131, 134))">
+                    <span *ngIf="form.questions[131].checked">{{form.questions[131].question}}</span>
+                    <span *ngIf="getCheckedQuestions(form.questions.slice(132, 134))"> ({{getCheckedQuestions(form.questions.slice(132, 134))}})</span>
+                    <span *ngIf="getCheckedQuestions(form.questions.slice(133, 173))">,</span>
+            </span>
+
+            <span *ngIf="getCheckedQuestions(form.questions.slice(134, 137))">
+                    <span *ngIf="form.questions[134].checked">{{form.questions[134].question}}</span>
+                    <span *ngIf="getCheckedQuestions(form.questions.slice(135, 137))"> ({{getCheckedQuestions(form.questions.slice(135, 137))}})</span>
+                    <span *ngIf="getCheckedQuestions(form.questions.slice(136, 173))">,</span>
+            </span>
+
+            <span *ngIf="getCheckedQuestions(form.questions.slice(137, 140))">
+                    <span *ngIf="form.questions[137].checked">{{form.questions[137].question}}</span>
+                    <span *ngIf="getCheckedQuestions(form.questions.slice(138, 140))"> ({{getCheckedQuestions(form.questions.slice(138, 140))}})</span>
+                    <span *ngIf="getCheckedQuestions(form.questions.slice(139, 173))">,</span>
+            </span>
+
+            <span *ngIf="getCheckedQuestions(form.questions.slice(140, 143))">
+                    <span *ngIf="form.questions[140].checked">{{form.questions[140].question}}</span>
+                    <span *ngIf="getCheckedQuestions(form.questions.slice(141, 143))"> ({{getCheckedQuestions(form.questions.slice(141, 143))}})</span>
+                    <span *ngIf="getCheckedQuestions(form.questions.slice(142, 173))">,</span>
+            </span>
+
+            <span *ngIf="getCheckedQuestions(form.questions.slice(143, 146))">
+                    <span *ngIf="form.questions[143].checked">{{form.questions[143].question}}</span>
+                    <span *ngIf="getCheckedQuestions(form.questions.slice(144, 146))"> ({{getCheckedQuestions(form.questions.slice(144, 146))}})</span>
+                    <span *ngIf="getCheckedQuestions(form.questions.slice(145, 173))">,</span>
+            </span>
+
+            <span *ngIf="getCheckedQuestions(form.questions.slice(146, 149))">
+                    <span *ngIf="form.questions[146].checked">{{form.questions[146].question}}</span>
+                    <span *ngIf="getCheckedQuestions(form.questions.slice(147, 149))"> ({{getCheckedQuestions(form.questions.slice(147, 149))}})</span>
+                    <span *ngIf="getCheckedQuestions(form.questions.slice(148, 173))">,</span>
+            </span>
+
+            <span *ngIf="getCheckedQuestions(form.questions.slice(149, 152))">
+                    <span *ngIf="form.questions[149].checked">{{form.questions[149].question}}</span>
+                    <span *ngIf="getCheckedQuestions(form.questions.slice(150, 152))"> ({{getCheckedQuestions(form.questions.slice(150, 152))}})</span>
+                    <span *ngIf="getCheckedQuestions(form.questions.slice(151, 173))">,</span>
+            </span>
+
+            <span *ngIf="getCheckedQuestions(form.questions.slice(152, 155))">
+                    <span *ngIf="form.questions[152].checked">{{form.questions[152].question}}</span>
+                    <span *ngIf="getCheckedQuestions(form.questions.slice(153, 155))"> ({{getCheckedQuestions(form.questions.slice(153, 155))}})</span>
+                    <span *ngIf="getCheckedQuestions(form.questions.slice(154, 173))">,</span>
+            </span>
+
+            <span *ngIf="getCheckedQuestions(form.questions.slice(155, 158))">
+                    <span *ngIf="form.questions[155].checked">{{form.questions[155].question}}</span>
+                    <span *ngIf="getCheckedQuestions(form.questions.slice(156, 158))"> ({{getCheckedQuestions(form.questions.slice(156, 158))}})</span>
+                    <span *ngIf="getCheckedQuestions(form.questions.slice(157, 173))">,</span>
+            </span>
+
+            <span *ngIf="getCheckedQuestions(form.questions.slice(158, 161))">
+                    <span *ngIf="form.questions[158].checked">{{form.questions[158].question}}</span>
+                    <span *ngIf="getCheckedQuestions(form.questions.slice(159, 161))"> ({{getCheckedQuestions(form.questions.slice(159, 161))}})</span>
+                    <span *ngIf="getCheckedQuestions(form.questions.slice(160, 173))">,</span>
+            </span>
+
+            <span *ngIf="getCheckedQuestions(form.questions.slice(161, 164))">
+                    <span *ngIf="form.questions[161].checked">{{form.questions[161].question}}</span>
+                    <span *ngIf="getCheckedQuestions(form.questions.slice(162, 164))"> ({{getCheckedQuestions(form.questions.slice(162, 164))}})</span>
+                    <span *ngIf="getCheckedQuestions(form.questions.slice(163, 173))">,</span>
+            </span>
+
+            <span *ngIf="getCheckedQuestions(form.questions.slice(164, 167))">
+                    <span *ngIf="form.questions[164].checked">{{form.questions[164].question}}</span>
+                    <span *ngIf="getCheckedQuestions(form.questions.slice(165, 167))"> ({{getCheckedQuestions(form.questions.slice(165, 167))}})</span>
+                    <span *ngIf="getCheckedQuestions(form.questions.slice(166, 173))">,</span>
+            </span>
+
+            <span *ngIf="getCheckedQuestions(form.questions.slice(167, 170))">
+                    <span *ngIf="form.questions[167].checked">{{form.questions[167].question}}</span>
+                    <span *ngIf="getCheckedQuestions(form.questions.slice(168, 170))"> ({{getCheckedQuestions(form.questions.slice(168, 170))}})</span>
+                    <span *ngIf="getCheckedQuestions(form.questions.slice(169, 173))">,</span>
+            </span>   
+
+            <span *ngIf="getCheckedQuestions(form.questions.slice(170, 173))">
+                    <span *ngIf="form.questions[170].checked">{{form.questions[170].question}}</span>
+                    <span *ngIf="getCheckedQuestions(form.questions.slice(171, 173))"> ({{getCheckedQuestions(form.questions.slice(171, 173))}})</span>
+            </span> 
+
+            <div *ngIf="form.questions[173].answer" class="multiline">{{form.questions[173].answer}}</div>
+
+            <label *ngIf="getCheckedQuestions(form.questions.slice(174, 177)) || form.questions[178].answer"
                 class="section">Manual Stretching:</label>
 
-            <div *ngIf="getCheckedQuestions(form.questions.slice(129, 133))">
-                <span *ngIf="form.questions[129].checked">{{form.questions[129].question}}</span><span *ngIf="form.questions[129].checked && getCheckedQuestions(form.questions.slice(130, 133))">,</span>
+            <div *ngIf="getCheckedQuestions(form.questions.slice(174, 178))">
+                <span *ngIf="form.questions[174].checked">{{form.questions[174].question}}</span><span *ngIf="form.questions[174].checked 
+                && getCheckedQuestions(form.questions.slice(175, 178))">,</span>
 
-                <span *ngIf="getCheckedQuestions(form.questions.slice(130, 133))">
-                    <span *ngIf="form.questions[130].checked">{{form.questions[130].question}}</span><span *ngIf="getCheckedQuestions(form.questions.slice(131, 133))"> ({{getCheckedQuestions(form.questions.slice(131, 133))}})</span>
+                <span *ngIf="getCheckedQuestions(form.questions.slice(175, 178))">
+                    <span *ngIf="form.questions[175].checked">{{form.questions[175].question}}</span>
+                    <span *ngIf="getCheckedQuestions(form.questions.slice(176, 178))"> ({{getCheckedQuestions(form.questions.slice(176, 178))}})</span>
                 </span>
             </div>
 
-            <div *ngIf="form.questions[133].answer" class="multiline">{{form.questions[133].answer}}</div>
+            <div *ngIf="form.questions[178].answer" class="multiline">{{form.questions[178].answer}}</div>
 
-            <div *ngIf="getCheckedQuestions(form.questions.slice(134, 136)) || form.questions[136].answer" class="marginalized">
-                <label class="section inline">Manual cx traction:</label>
-                <span *ngIf="form.questions[134].checked">{{form.questions[134].question}}</span>
-                <span *ngIf="form.questions[135].checked">{{form.questions[135].question}}</span>
+            <div *ngIf="getCheckedQuestions(form.questions.slice(180, 182)) || form.questions[182].answer" class="marginalized">
+                <label class="section inline">Manual L-P traction:</label>
+                <span *ngIf="form.questions[180].checked">{{form.questions[180].question}}</span>
+                <span *ngIf="form.questions[181].checked">{{form.questions[181].question}}</span>
             </div>
 
-            <div *ngIf="form.questions[136].answer" class="multiline">{{form.questions[136].answer}}</div>
+            <div *ngIf="form.questions[136].answer" class="multiline">{{form.questions[182].answer}}</div>
 
-            <div *ngIf="getCheckedQuestions(form.questions.slice(137, 139)) || form.questions[139].answer"  class="marginalized">
+            <div *ngIf="getCheckedQuestions(form.questions.slice(184, 186)) || form.questions[184].answer" class="marginalized">
+                <label class="section inline">Manual cx traction:</label>
+                <span *ngIf="form.questions[184].checked">{{form.questions[184].question}}</span>
+                <span *ngIf="form.questions[185].checked">{{form.questions[185].question}}</span>
+            </div>
+
+            <div *ngIf="form.questions[186].answer" class="multiline">{{form.questions[186].answer}}</div>
+
+            <div *ngIf="getCheckedQuestions(form.questions.slice(188, 190)) || form.questions[188].answer"  class="marginalized">
                 <label class="section inline">Suboccipital release:</label>
-                <span *ngIf="form.questions[137].checked">{{form.questions[137].question}}</span>
-                <span *ngIf="form.questions[138].checked">{{form.questions[138].question}}</span>
+                <span *ngIf="form.questions[188].checked">{{form.questions[188].question}}</span>
+                <span *ngIf="form.questions[189].checked">{{form.questions[189].question}}</span>
             </div>
             
-            <div *ngIf="form.questions[139].answer" class="multiline">{{form.questions[139].answer}}</div>
+            <div *ngIf="form.questions[190].answer" class="multiline">{{form.questions[190].answer}}</div>
 
             <label *ngIf="getCheckedQuestions(form.questions.slice(140, 148)) || form.questions[148].answer
                        || getCheckedQuestions(form.questions.slice(149, 155)) || form.questions[155].answer"
