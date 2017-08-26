@@ -62,7 +62,7 @@ export class FormService {
     }
 
     private extractData(response: Response) {
-        console.log('extractData: ' + JSON.stringify(response.json()))
+        //console.log('extractData: ' + JSON.stringify(response.json()));
         return response.json() || {};
     }
 
