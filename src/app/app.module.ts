@@ -13,6 +13,7 @@ import { FormTwoPrintComponent } from './forms/form-2-print.component';
 import { FormThreeEditComponent } from './forms/form-3-edit.component';
 import { FormThreePrintComponent } from './forms/form-3-print.component';
 import { FormFourEditComponent } from './forms/form-4-edit.component';
+import { FormFourPrintComponent } from './forms/form-4-print.component';
 import { PatientService } from '../services/patient.service';
 import { FormService } from '../services/form.service';
 import { PatientFilterPipe } from '../pipes/patient-filter.pipe';
@@ -33,7 +34,8 @@ import { TypeaheadModule } from 'ngx-bootstrap/typeahead';
     FormTwoPrintComponent,
     FormThreeEditComponent,
     FormThreePrintComponent, 
-    FormFourEditComponent,   
+    FormFourEditComponent,  
+    FormFourPrintComponent, 
     PatientFilterPipe,
     FormFilterPipe
   ],

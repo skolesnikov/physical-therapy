@@ -110,53 +110,10 @@
         <label class="section">STM/MFR:</label>
         
         <div class="checkbox">
-            <div class="group">
-                <label><input type="checkbox" name="q70" [(ngModel)]="form.questions[70].checked"><span>{{form.questions[70].question}}</span></label>(
-                <label><input type="checkbox" name="q71" [(ngModel)]="form.questions[71].checked"><span>{{form.questions[71].question}}</span></label>
-                <label><input type="checkbox" name="q72" [(ngModel)]="form.questions[72].checked"><span>{{form.questions[72].question}}</span>)</label>
-            </div>
-            
-            <div class="group">
-                <label><input type="checkbox" name="q73" [(ngModel)]="form.questions[73].checked"><span>{{form.questions[73].question}}</span></label>(
-                <label><input type="checkbox" name="q74" [(ngModel)]="form.questions[74].checked"><span>{{form.questions[74].question}}</span></label>
-                <label><input type="checkbox" name="q75" [(ngModel)]="form.questions[75].checked"><span>{{form.questions[75].question}}</span>)</label>
-            </div>
-
-            <div class="group">
-                <label><input type="checkbox" name="q76" [(ngModel)]="form.questions[76].checked"><span>{{form.questions[76].question}}</span></label>(
-                <label><input type="checkbox" name="q77" [(ngModel)]="form.questions[77].checked"><span>{{form.questions[77].question}}</span></label>
-                <label><input type="checkbox" name="q78" [(ngModel)]="form.questions[78].checked"><span>{{form.questions[78].question}}</span>)</label>
-            </div>
-
-            <div class="group">
-                <label><input type="checkbox" name="q79" [(ngModel)]="form.questions[79].checked"><span>{{form.questions[79].question}}</span></label>(
-                <label><input type="checkbox" name="q80" [(ngModel)]="form.questions[80].checked"><span>{{form.questions[80].question}}</span></label>
-                <label><input type="checkbox" name="q81" [(ngModel)]="form.questions[81].checked"><span>{{form.questions[81].question}}</span>)</label>
-            </div>
-
-            <div class="group">
-                <label><input type="checkbox" name="q82" [(ngModel)]="form.questions[82].checked"><span>{{form.questions[82].question}}</span></label>(
-                <label><input type="checkbox" name="q83" [(ngModel)]="form.questions[83].checked"><span>{{form.questions[83].question}}</span></label>
-                <label><input type="checkbox" name="q84" [(ngModel)]="form.questions[84].checked"><span>{{form.questions[84].question}}</span>)</label>
-            </div>
-
-            <div class="group">
-                <label><input type="checkbox" name="q85" [(ngModel)]="form.questions[85].checked"><span>{{form.questions[85].question}}</span></label>(
-                <label><input type="checkbox" name="q86" [(ngModel)]="form.questions[86].checked"><span>{{form.questions[86].question}}</span></label>
-                <label><input type="checkbox" name="q87" [(ngModel)]="form.questions[87].checked"><span>{{form.questions[87].question}}</span>)</label>
-            </div>
-
-            <div class="group">
-                <label><input type="checkbox" name="q88" [(ngModel)]="form.questions[88].checked"><span>{{form.questions[88].question}}</span></label>(
-                <label><input type="checkbox" name="q89" [(ngModel)]="form.questions[89].checked"><span>{{form.questions[89].question}}</span></label>
-                <label><input type="checkbox" name="q90" [(ngModel)]="form.questions[90].checked"><span>{{form.questions[90].question}}</span>)</label>
-            </div>
-
-            <div class="group">
-                <label><input type="checkbox" name="q91" [(ngModel)]="form.questions[91].checked"><span>{{form.questions[91].question}}</span></label>(
-                <label><input type="checkbox" name="q92" [(ngModel)]="form.questions[92].checked"><span>{{form.questions[92].question}}</span></label>
-                <label><input type="checkbox" name="q93" [(ngModel)]="form.questions[93].checked"><span>{{form.questions[93].question}}</span>)</label>
-            </div>            
+            <label *ngFor="let question of form.questions.slice(70, 82)">
+                <input type="checkbox" name="{{'q' + question.index}}" [(ngModel)]="question.checked"> 
+                <span>{{question.question}}</span>
+            </label>
         </div>
 
         <div class="form-group">
@@ -166,135 +123,10 @@
         <label class="section">NMT (MTrP/ischaemic bands release):</label>
         
         <div class="checkbox">
-            <div class="group">
-                <label><input type="checkbox" name="q95" [(ngModel)]="form.questions[95].checked"><span>{{form.questions[95].question}}</span></label>(
-                <label><input type="checkbox" name="q96" [(ngModel)]="form.questions[96].checked"><span>{{form.questions[96].question}}</span></label>
-                <label><input type="checkbox" name="q97" [(ngModel)]="form.questions[97].checked"><span>{{form.questions[97].question}}</span></label>
-                <label><input type="checkbox" name="q98" [(ngModel)]="form.questions[98].checked"><span>{{form.questions[98].question}}</span>)</label>
-            </div>
-            
-            <div class="group">
-                <label><input type="checkbox" name="q99" [(ngModel)]="form.questions[99].checked"><span>{{form.questions[99].question}}</span></label>(
-                <label><input type="checkbox" name="q100" [(ngModel)]="form.questions[100].checked"><span>{{form.questions[100].question}}</span></label>
-                <label><input type="checkbox" name="q101" [(ngModel)]="form.questions[101].checked"><span>{{form.questions[101].question}}</span></label>
-                <label><input type="checkbox" name="q102" [(ngModel)]="form.questions[102].checked"><span>{{form.questions[102].question}}</span>)</label>
-            </div>
-
-            <div class="group">
-                <label><input type="checkbox" name="q103" [(ngModel)]="form.questions[103].checked"><span>{{form.questions[103].question}}</span></label>(
-                <label><input type="checkbox" name="q104" [(ngModel)]="form.questions[104].checked"><span>{{form.questions[104].question}}</span></label>
-                <label><input type="checkbox" name="q105" [(ngModel)]="form.questions[105].checked"><span>{{form.questions[105].question}}</span></label>
-                <label><input type="checkbox" name="q106" [(ngModel)]="form.questions[106].checked"><span>{{form.questions[106].question}}</span>)</label>
-            </div>
-
-            <div class="group">
-                <label><input type="checkbox" name="q107" [(ngModel)]="form.questions[107].checked"><span>{{form.questions[107].question}}</span></label>(
-                <label><input type="checkbox" name="q108" [(ngModel)]="form.questions[108].checked"><span>{{form.questions[108].question}}</span></label>
-                <label><input type="checkbox" name="q109" [(ngModel)]="form.questions[109].checked"><span>{{form.questions[109].question}}</span></label>
-                <label><input type="checkbox" name="q110" [(ngModel)]="form.questions[110].checked"><span>{{form.questions[110].question}}</span>)</label>
-            </div>
-
-            <div class="group">
-                <label><input type="checkbox" name="q111" [(ngModel)]="form.questions[111].checked"><span>{{form.questions[111].question}}</span></label>(
-                <label><input type="checkbox" name="q112" [(ngModel)]="form.questions[112].checked"><span>{{form.questions[112].question}}</span></label>
-                <label><input type="checkbox" name="q113" [(ngModel)]="form.questions[113].checked"><span>{{form.questions[113].question}}</span></label>
-                <label><input type="checkbox" name="q114" [(ngModel)]="form.questions[114].checked"><span>{{form.questions[114].question}}</span>)</label>
-            </div>
-
-            <div class="group">
-                <label><input type="checkbox" name="q115" [(ngModel)]="form.questions[115].checked"><span>{{form.questions[115].question}}</span></label>(
-                <label><input type="checkbox" name="q116" [(ngModel)]="form.questions[116].checked"><span>{{form.questions[116].question}}</span></label>
-                <label><input type="checkbox" name="q117" [(ngModel)]="form.questions[117].checked"><span>{{form.questions[117].question}}</span></label>
-                <label><input type="checkbox" name="q118" [(ngModel)]="form.questions[118].checked"><span>{{form.questions[118].question}}</span>)</label>
-            </div>
-
-            <div class="group">
-                <label><input type="checkbox" name="q119" [(ngModel)]="form.questions[119].checked"><span>{{form.questions[119].question}}</span></label>(
-                <label><input type="checkbox" name="q120" [(ngModel)]="form.questions[120].checked"><span>{{form.questions[120].question}}</span></label>
-                <label><input type="checkbox" name="q121" [(ngModel)]="form.questions[121].checked"><span>{{form.questions[121].question}}</span></label>
-                <label><input type="checkbox" name="q122" [(ngModel)]="form.questions[122].checked"><span>{{form.questions[122].question}}</span>)</label>
-            </div>
-
-            <div class="group">
-                <label><input type="checkbox" name="q123" [(ngModel)]="form.questions[123].checked"><span>{{form.questions[123].question}}</span></label>(
-                <label><input type="checkbox" name="q124" [(ngModel)]="form.questions[124].checked"><span>{{form.questions[124].question}}</span></label>
-                <label><input type="checkbox" name="q125" [(ngModel)]="form.questions[125].checked"><span>{{form.questions[125].question}}</span></label>
-                <label><input type="checkbox" name="q126" [(ngModel)]="form.questions[126].checked"><span>{{form.questions[126].question}}</span>)</label>
-            </div>
-            
-            <div class="group">
-                <label><input type="checkbox" name="q127" [(ngModel)]="form.questions[127].checked"><span>{{form.questions[127].question}}</span></label>(
-                <label><input type="checkbox" name="q128" [(ngModel)]="form.questions[128].checked"><span>{{form.questions[128].question}}</span></label>
-                <label><input type="checkbox" name="q129" [(ngModel)]="form.questions[129].checked"><span>{{form.questions[129].question}}</span></label>
-                <label><input type="checkbox" name="q130" [(ngModel)]="form.questions[130].checked"><span>{{form.questions[130].question}}</span>)</label>
-            </div>
-
-            <div class="group">
-                <label><input type="checkbox" name="q131" [(ngModel)]="form.questions[131].checked"><span>{{form.questions[131].question}}</span></label>(
-                <label><input type="checkbox" name="q132" [(ngModel)]="form.questions[132].checked"><span>{{form.questions[132].question}}</span></label>
-                <label><input type="checkbox" name="q133" [(ngModel)]="form.questions[133].checked"><span>{{form.questions[133].question}}</span></label>
-                <label><input type="checkbox" name="q134" [(ngModel)]="form.questions[134].checked"><span>{{form.questions[134].question}}</span>)</label>
-            </div>
-
-            <div class="group">
-                <label><input type="checkbox" name="q135" [(ngModel)]="form.questions[135].checked"><span>{{form.questions[135].question}}</span></label>(
-                <label><input type="checkbox" name="q136" [(ngModel)]="form.questions[136].checked"><span>{{form.questions[136].question}}</span></label>
-                <label><input type="checkbox" name="q137" [(ngModel)]="form.questions[137].checked"><span>{{form.questions[137].question}}</span></label>
-                <label><input type="checkbox" name="q138" [(ngModel)]="form.questions[138].checked"><span>{{form.questions[138].question}}</span>)</label>
-            </div>
-
-            <div class="group">
-                <label><input type="checkbox" name="q139" [(ngModel)]="form.questions[139].checked"><span>{{form.questions[139].question}}</span></label>(
-                <label><input type="checkbox" name="q140" [(ngModel)]="form.questions[140].checked"><span>{{form.questions[140].question}}</span></label>
-                <label><input type="checkbox" name="q141" [(ngModel)]="form.questions[141].checked"><span>{{form.questions[141].question}}</span>)</label>
-            </div>
-
-            <div class="group">
-                <label><input type="checkbox" name="q142" [(ngModel)]="form.questions[142].checked"><span>{{form.questions[142].question}}</span></label>(
-                <label><input type="checkbox" name="q143" [(ngModel)]="form.questions[143].checked"><span>{{form.questions[143].question}}</span></label>
-                <label><input type="checkbox" name="q144" [(ngModel)]="form.questions[144].checked"><span>{{form.questions[144].question}}</span>)</label>
-            </div>
-
-            <div class="group">
-                <label><input type="checkbox" name="q145" [(ngModel)]="form.questions[145].checked"><span>{{form.questions[145].question}}</span></label>(
-                <label><input type="checkbox" name="q146" [(ngModel)]="form.questions[146].checked"><span>{{form.questions[146].question}}</span></label>
-                <label><input type="checkbox" name="q147" [(ngModel)]="form.questions[147].checked"><span>{{form.questions[147].question}}</span>)</label>
-            </div>
-
-            <div class="group">
-                <label><input type="checkbox" name="q148" [(ngModel)]="form.questions[148].checked"><span>{{form.questions[148].question}}</span></label>(
-                <label><input type="checkbox" name="q149" [(ngModel)]="form.questions[149].checked"><span>{{form.questions[149].question}}</span></label>
-                <label><input type="checkbox" name="q150" [(ngModel)]="form.questions[150].checked"><span>{{form.questions[150].question}}</span></label>
-                <label><input type="checkbox" name="q151" [(ngModel)]="form.questions[151].checked"><span>{{form.questions[151].question}}</span>)</label>
-            </div>
-
-            <div class="group">
-                <label><input type="checkbox" name="q152" [(ngModel)]="form.questions[152].checked"><span>{{form.questions[152].question}}</span></label>(
-                <label><input type="checkbox" name="q153" [(ngModel)]="form.questions[153].checked"><span>{{form.questions[153].question}}</span></label>
-                <label><input type="checkbox" name="q154" [(ngModel)]="form.questions[154].checked"><span>{{form.questions[154].question}}</span></label>
-                <label><input type="checkbox" name="q155" [(ngModel)]="form.questions[155].checked"><span>{{form.questions[155].question}}</span>)</label>
-            </div>
-
-            <div class="group">
-                <label><input type="checkbox" name="q156" [(ngModel)]="form.questions[156].checked"><span>{{form.questions[156].question}}</span></label>(
-                <label><input type="checkbox" name="q157" [(ngModel)]="form.questions[157].checked"><span>{{form.questions[157].question}}</span></label>
-                <label><input type="checkbox" name="q158" [(ngModel)]="form.questions[158].checked"><span>{{form.questions[158].question}}</span></label>
-                <label><input type="checkbox" name="q159" [(ngModel)]="form.questions[159].checked"><span>{{form.questions[159].question}}</span>)</label>
-            </div>
-
-            <div class="group">
-                <label><input type="checkbox" name="q160" [(ngModel)]="form.questions[160].checked"><span>{{form.questions[160].question}}</span></label>(
-                <label><input type="checkbox" name="q161" [(ngModel)]="form.questions[161].checked"><span>{{form.questions[161].question}}</span></label>
-                <label><input type="checkbox" name="q162" [(ngModel)]="form.questions[162].checked"><span>{{form.questions[162].question}}</span></label>
-                <label><input type="checkbox" name="q163" [(ngModel)]="form.questions[163].checked"><span>{{form.questions[163].question}}</span>)</label>
-            </div>
-
-            <div class="group">
-                <label><input type="checkbox" name="q164" [(ngModel)]="form.questions[164].checked"><span>{{form.questions[164].question}}</span></label>(
-                <label><input type="checkbox" name="q165" [(ngModel)]="form.questions[165].checked"><span>{{form.questions[165].question}}</span></label>
-                <label><input type="checkbox" name="q166" [(ngModel)]="form.questions[166].checked"><span>{{form.questions[166].question}}</span></label>
-                <label><input type="checkbox" name="q167" [(ngModel)]="form.questions[167].checked"><span>{{form.questions[167].question}}</span>)</label>
-            </div>
+            <label *ngFor="let question of form.questions.slice(95, 117)">
+                <input type="checkbox" name="{{'q' + question.index}}" [(ngModel)]="question.checked"> 
+                <span>{{question.question}}</span>
+            </label>
         </div>
 
         <div class="form-group">
@@ -402,18 +234,6 @@
             </div>
             <div class="col-md-7">
                 <input type="text" class="form-control" name="q237" [(ngModel)]="form.questions[237].answer"/>
-            </div>
-        </div>
-
-        <div class="checkbox row">
-            <div class="col-md-5 group">
-                <label *ngFor="let question of form.questions.slice(238, 240)">
-                    <input type="checkbox" name="{{'q' + question.index}}" [(ngModel)]="question.checked"> 
-                    <span>{{question.question}}</span>
-                </label>
-            </div>
-            <div class="col-md-7">
-                <input type="text" class="form-control" name="q240" [(ngModel)]="form.questions[240].answer"/>
             </div>
         </div>
 

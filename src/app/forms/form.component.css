@@ -12,6 +12,10 @@ label.section {
     margin-top: 20px;
 }
 
+div.section {
+    margin-top: 20px;
+}
+
 span.section {
     font-weight: bold;
 }

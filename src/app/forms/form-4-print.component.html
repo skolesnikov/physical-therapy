@@ -1,0 +1,116 @@
+<div *ngIf="form" class="printPreview">
+    <div class="row">
+        <div class="col-xs-2 h4label"><label>Date:</label></div>
+        <div class="col-xs-10"><h4>{{form.formDate | date:'fullDate'}}</h4></div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-2 h4label"><label>Patient Name:</label></div>
+        <div class="col-xs-10" *ngIf="patient"><h4>{{patient.lastName}}, {{patient.firstName}}</h4></div>
+    </div>    
+
+    <label class="subHeader">Subjective:</label>
+
+    <div *ngIf="getAnswers(form.questions.slice(0, 37))" >
+        <label class="section">Pain:</label>    
+        <div>{{getAnswers(form.questions.slice(0, 37))}}</div>
+    </div>    
+
+    <div *ngIf="getAnswers(form.questions.slice(37, 69))" >
+        <label class="section">Function:</label>    
+        <div>{{getAnswers(form.questions.slice(37, 69))}}</div>
+    </div> 
+
+    <label class="subHeader">Objective:</label>
+
+    <div *ngIf="form.questions[69].checked" class="section">
+        <span class="section">{{form.questions[69].question}}</span>
+        <span *ngIf="form.questions[69].answer" class="multiline">{{form.questions[69].answer}}</span>
+    </div>
+
+    <div *ngIf="getAnswers(form.questions.slice(70, 95))">
+        <label class="section">STM/MFR:</label>    
+        <div>{{getAnswers(form.questions.slice(70, 95))}}</div>
+    </div> 
+
+    <div *ngIf="getAnswers(form.questions.slice(95, 169))">
+        <label class="section">NMT (MTrP/ischaemic bands release):</label>    
+        <div>{{getAnswers(form.questions.slice(95, 169))}}</div>
+    </div> 
+
+    <div *ngIf="getAnswers(form.questions.slice(169, 177))">
+        <label class="section">Manual Stretching:</label>
+        <span *ngIf="form.questions[169].checked">{{form.questions[169].question}}</span>
+        <span *ngIf="getAnswers(form.questions.slice(170, 173))">
+            ({{getAnswers(form.questions.slice(170, 173))}})
+        </span>
+        <span>{{getAnswers(form.questions.slice(173, 177))}}</span>
+    </div>
+
+    <div *ngIf="getAnswers(form.questions.slice(177, 215))" >
+        <label class="section">ROM:</label>    
+        <div>{{getAnswers(form.questions.slice(177, 215))}}</div>
+    </div>
+
+    <div *ngIf="getAnswers(form.questions.slice(215, 266))" >
+        <label class="section">Joint mobilizations:</label>    
+        <div>{{getAnswers(form.questions.slice(215, 266))}}</div>
+    </div>
+
+    <div *ngIf="getAnswers(form.questions.slice(266, 286))" >
+        <label class="section">NM Re-education:</label>    
+        <div>{{getAnswers(form.questions.slice(266, 286))}}</div>
+    </div>
+
+    <div *ngIf="getAnswers(form.questions.slice(286, 318))" >
+        <label class="section">Therapeutic exercises:</label>    
+        <div>{{getAnswers(form.questions.slice(286, 318))}}</div>
+    </div>
+
+    <div *ngIf="getAnswers(form.questions.slice(318, 332))" >
+        <label class="section">Kinetic/functional activities:</label>    
+        <div>{{getAnswers(form.questions.slice(318, 332))}}</div>
+    </div>
+
+    <div *ngIf="getAnswers(form.questions.slice(332, 345))" >
+        <label class="section">Patient education:</label>    
+        <div>{{getAnswers(form.questions.slice(332, 345))}}</div>
+    </div>
+
+    <div *ngIf="getAnswers(form.questions.slice(345, 357))" >
+        <label class="section">ULRASOUND:</label>    
+        <div>{{getAnswers(form.questions.slice(345, 357))}}</div>
+    </div>
+
+    <div *ngIf="form.questions[357].answer" class="section">
+        <label>Phonophoresis:</label>
+        <span  class="multiline">{{form.questions[357].answer}}</span>
+    </div>
+
+    <div *ngIf="getAnswers(form.questions.slice(358, 367))" >
+        <label class="section">MHP:</label>    
+        <div>{{getAnswers(form.questions.slice(358, 367))}}</div>
+    </div>
+
+    <div *ngIf="getAnswers(form.questions.slice(367, 383))" >
+        <label class="section">EStim:</label>    
+        <div>{{getAnswers(form.questions.slice(367, 383))}}</div>
+    </div>
+
+    <div *ngIf="getAnswers(form.questions.slice(383, 388))" >
+        <label class="section">Modalities:</label>    
+        <div>{{getAnswers(form.questions.slice(383, 388))}}</div>
+    </div>
+
+    <div *ngIf="getAnswers(form.questions.slice(388, 412))" >
+        <label class="subHeader">ASSESSMENT</label>    
+        <div>{{getAnswers(form.questions.slice(388, 412))}}</div>
+    </div>
+
+    <div *ngIf="getAnswers(form.questions.slice(412, 444))" >
+        <label class="subHeader">PLAN</label>    
+        <div>{{getAnswers(form.questions.slice(412, 444))}}</div>
+    </div>
+
+    <label class="signature">Natalia Gerachenko, LPT, MPT, BS, CLT</label>
+</div>

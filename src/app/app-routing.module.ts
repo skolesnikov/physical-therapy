@@ -9,6 +9,7 @@ import { FormTwoPrintComponent } from './forms/form-2-print.component';
 import { FormThreeEditComponent } from './forms/form-3-edit.component';
 import { FormThreePrintComponent } from './forms/form-3-print.component';
 import { FormFourEditComponent } from './forms/form-4-edit.component';
+import { FormFourPrintComponent } from './forms/form-4-print.component';
 import { PrintGuard } from '../guards/print-guard.service';
 
 const routes: Routes = [
@@ -26,6 +27,7 @@ const routes: Routes = [
   { path: 'form-3-print/:id', component: FormThreePrintComponent, canActivate: [ PrintGuard] },
   { path: 'form-4-edit/:id/:patientId', component: FormFourEditComponent },
   { path: 'form-4-edit/:id', component: FormFourEditComponent },
+  { path: 'form-4-print/:id', component: FormFourPrintComponent, canActivate: [ PrintGuard] },
   { path: '**', pathMatch: 'full', component: DashboardComponent }
 ];
 
