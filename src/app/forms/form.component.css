@@ -20,6 +20,11 @@ span.section {
     font-weight: bold;
 }
 
+.section label {
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
 input[type=checkbox] + span {
   text-decoration: none;
 } 

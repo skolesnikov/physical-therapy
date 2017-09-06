@@ -48,11 +48,12 @@ export class FormOnePrintComponent implements OnInit, OnDestroy {
     getPatient(id: string) {
         this.patientService.getPatient(id).subscribe(
             patient => this.patient = patient,
-            error => this.errorMessage = <any>error,
-            () => setTimeout(()=>{ window.print() }, 1000));            
+            error => this.errorMessage = <any>error//,
+            //() => setTimeout(()=>{ window.print() }, 1000)
+        );            
     }
 
-    getCheckedQuestions(questions: IQuestion[]){
+    getAnswers(questions: IQuestion[]){
         var checked:string[] = [];
 
         for (var question of questions)
@@ -60,6 +61,11 @@ export class FormOnePrintComponent implements OnInit, OnDestroy {
             if (question.checked)
             {
                 checked.push(question.question);
+            }
+
+            if (question.answer)
+            {
+                checked.push(question.answer);
             }
         }
 
