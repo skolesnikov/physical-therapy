@@ -48,8 +48,8 @@ export class FormTwoPrintComponent implements OnInit, OnDestroy {
     getPatient(id: string) {
         this.patientService.getPatient(id).subscribe(
             patient => this.patient = patient,
-            error => this.errorMessage = <any>error//,
-            //() => setTimeout(()=>{ window.print() }, 1000)
+            error => this.errorMessage = <any>error,
+            () => setTimeout(()=>{ window.print() }, 1000)
         );            
     }
 
