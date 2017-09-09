@@ -127,13 +127,8 @@
 
     <div *ngIf="getAnswers(form.questions.slice(129, 134))" class="section">
         <label>Manual Stretching:</label>
-
-        <span *ngIf="form.questions[129].checked">{{form.questions[129].question}}</span><span *ngIf="form.questions[129].checked && getAnswers(form.questions.slice(130, 134))">,</span>
-        
-        <span *ngIf="getAnswers(form.questions.slice(130, 133))">
-            <span *ngIf="form.questions[130].checked">{{form.questions[130].question}}</span><span *ngIf="getAnswers(form.questions.slice(131, 133))"> ({{getAnswers(form.questions.slice(131, 133))}})</span>
-        </span><span *ngIf="getAnswers(form.questions.slice(130, 133)) && form.questions[133].answer">,</span>
-
+        <span *ngIf="form.questions[129].checked">{{form.questions[129].question}}</span><span *ngIf="form.questions[129].checked && getAnswers(form.questions.slice(130, 134))">,</span>        
+        <span *ngIf="getAnswers(form.questions.slice(130, 133))"><span *ngIf="form.questions[130].checked">{{form.questions[130].question}}</span><span *ngIf="getAnswers(form.questions.slice(131, 133))"> ({{getAnswers(form.questions.slice(131, 133))}})</span></span><span *ngIf="getAnswers(form.questions.slice(130, 133)) && form.questions[133].answer">,</span>
         <span *ngIf="form.questions[133].answer" class="multiline">{{form.questions[133].answer}}</span>
     </div>
 
