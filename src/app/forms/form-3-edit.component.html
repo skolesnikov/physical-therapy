@@ -76,6 +76,9 @@
                 <label *ngFor="let question of form.questions.slice(0, 40)">
                     <input type="checkbox" name="{{'q' + question.index}}" [(ngModel)]="question.checked"> 
                     <span>{{question.question}}</span>
+                </label><label>
+                    <input type="checkbox" name="q476" [(ngModel)]="form.questions[476].checked"> 
+                    <span>{{form.questions[476].question}}</span>
                 </label>
             </div>
 
@@ -341,13 +344,11 @@
                 <div class="col-md-10">
                     <div class="checkbox group">
                         <label>
-                            <input type="checkbox" name="q180" [(ngModel)]="form.questions[180].checked" 
-                                (change)="form.questions[181].checked = !form.questions[180].checked">
+                            <input type="checkbox" name="q180" [(ngModel)]="form.questions[180].checked">
                             <span>{{form.questions[180].question}}</span>
                         </label>
                         <label>
-                            <input type="checkbox" name="q181" [(ngModel)]="form.questions[181].checked" 
-                                (change)="form.questions[180].checked = !form.questions[181].checked">
+                            <input type="checkbox" name="q181" [(ngModel)]="form.questions[181].checked">
                             <span>{{form.questions[181].question}}</span>
                         </label>
                     </div>
@@ -365,13 +366,11 @@
                 <div class="col-md-10">
                     <div class="checkbox group">
                         <label>
-                            <input type="checkbox" name="q184" [(ngModel)]="form.questions[184].checked" 
-                                (change)="form.questions[185].checked = !form.questions[184].checked">
+                            <input type="checkbox" name="q184" [(ngModel)]="form.questions[184].checked">
                             <span>{{form.questions[184].question}}</span>
                         </label>
                         <label>
-                            <input type="checkbox" name="q185" [(ngModel)]="form.questions[185].checked" 
-                                (change)="form.questions[184].checked = !form.questions[185].checked">
+                            <input type="checkbox" name="q185" [(ngModel)]="form.questions[185].checked">
                             <span>{{form.questions[185].question}}</span>
                         </label>
                     </div>

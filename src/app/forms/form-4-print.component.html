@@ -11,8 +11,8 @@
 
     <label class="subHeader">Subjective:</label>
 
-    <div *ngIf="getAnswers(form.questions.slice(0, 37))" class="section">
-        <label>Pain:</label> {{getAnswers(form.questions.slice(0, 37))}}
+    <div *ngIf="getAnswers(form.questions.slice(0, 37)) || form.questions[444].checked" class="section">
+        <label>Pain:</label> {{getAnswers(form.questions.slice(0, 36).concat(form.questions.slice(444, 445), form.questions.slice(36, 37)))}}
     </div>    
 
     <div *ngIf="getAnswers(form.questions.slice(37, 69))" class="section">
