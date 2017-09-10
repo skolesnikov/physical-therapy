@@ -76,6 +76,9 @@
                 <label *ngFor="let question of form.questions.slice(0, 34)">
                     <input type="checkbox" name="{{'q' + question.index}}" [(ngModel)]="question.checked"> 
                     <span>{{question.question}}</span>
+                </label><label>
+                    <input type="checkbox" name="q332" [(ngModel)]="form.questions[332].checked"> 
+                    <span>{{form.questions[332].question}}</span>
                 </label>
             </div>
 
