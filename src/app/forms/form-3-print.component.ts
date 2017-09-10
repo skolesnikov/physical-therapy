@@ -52,7 +52,7 @@ export class FormThreePrintComponent implements OnInit, OnDestroy {
             () => setTimeout(()=>{ window.print() }, 1000));            
     }
 
-    getCheckedQuestions(questions: IQuestion[]){
+    getAnswers(questions: IQuestion[]){
         var checked:string[] = [];
 
         for (var question of questions)
@@ -61,10 +61,17 @@ export class FormThreePrintComponent implements OnInit, OnDestroy {
             {
                 checked.push(question.question);
             }
+
+            if (question.answer)
+            {
+                checked.push(question.answer);
+            }
         }
 
         return checked.join(", ");
     }
+
+
 
     onBack(): void {
         this.router.navigate([`/patient/${this.form.patientId}`]);
