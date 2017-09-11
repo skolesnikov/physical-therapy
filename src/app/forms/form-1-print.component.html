@@ -57,7 +57,7 @@
         </span>
 
         <span *ngIf="getAnswers(form.questions.slice(82, 85))">
-            <span *ngIf="form.questions[82].checked">{{form.questions[82].question}}</span><span *ngIf="getAnswers(form.questions.slice(83, 85))"> ({{getAnswers(form.questions.slice(83, 85))}})</span><span *ngIf="getAnswers(form.questions.slice(82, 86))">,</span>
+            <span *ngIf="form.questions[82].checked">{{form.questions[82].question}}</span><span *ngIf="getAnswers(form.questions.slice(83, 85))"> ({{getAnswers(form.questions.slice(83, 85))}})</span><span *ngIf="getAnswers(form.questions.slice(85, 86))">,</span>
         </span>
 
         <span *ngIf="form.questions[85].answer" class="multiline">{{form.questions[85].answer}}</span>
