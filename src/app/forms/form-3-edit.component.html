@@ -687,18 +687,14 @@
 
              <label class="section">Therapeutic exercises:</label>
 
-            <div class="checkbox">
-                <label *ngFor="let question of form.questions.slice(456, 475)">
+             <div class="checkbox">
+                <label *ngFor="let question of form.questions.slice(500, 502)">
                     <input type="checkbox" name="{{'q' + question.index}}" [(ngModel)]="question.checked"> 
                     <span>{{question.question}}</span>
                 </label>
             </div>
 
-            <div class="form-group">
-                <textarea class="form-control" rows="3" name="q475" 
-                [(ngModel)]="form.questions[475].answer"></textarea>
-            </div> 
-            
+
 
             <label class="section">Patient education:</label>
 

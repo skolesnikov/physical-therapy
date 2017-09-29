@@ -431,17 +431,68 @@
             </div>
 
             <label class="section">Therapeutic exercises:</label>
-
             <div class="checkbox">
-                <label *ngFor="let question of form.questions.slice(312, 331)">
+                <label *ngFor="let question of form.questions.slice(333, 338)">
                     <input type="checkbox" name="{{'q' + question.index}}" [(ngModel)]="question.checked"> 
                     <span>{{question.question}}</span>
                 </label>
             </div>
-
-            <div class="form-group">
-                <textarea class="form-control" rows="3" name="q331" [(ngModel)]="form.questions[331].answer"></textarea>
+            <div class="checkbox row">
+                    <div class="col-md-5 group">
+                        <label><input type="checkbox" name="q338" [(ngModel)]="form.questions[338].checked"><span>{{form.questions[338].question}}</span></label>
+                    </div>
+                    <div class="col-md-7">
+                        <input type="text" class="form-control" name="q339" [(ngModel)]="form.questions[339].answer"/>
+                    </div>
             </div>
+            <div class="checkbox row">
+                    <div class="col-md-5 group">
+                        <label><input type="checkbox" name="q340" [(ngModel)]="form.questions[340].checked"><span>{{form.questions[340].question}}</span></label>
+                    </div>
+                    <div class="col-md-7">
+                        <input type="text" class="form-control" name="q341" [(ngModel)]="form.questions[341].answer"/>
+                    </div>
+            </div>
+            <div class="checkbox row">
+                    <div class="col-md-5 group">
+                        <label><input type="checkbox" name="q342" [(ngModel)]="form.questions[342].checked"><span>{{form.questions[342].question}}</span></label>
+                    </div>
+                    <div class="col-md-7">
+                        <input type="text" class="form-control" name="q343" [(ngModel)]="form.questions[343].answer"/>
+                    </div>
+            </div>
+            <div class="checkbox row">
+                    <div class="col-md-5 group">
+                        <label><input type="checkbox" name="q344" [(ngModel)]="form.questions[344].checked"><span>{{form.questions[344].question}}</span></label>
+                    </div>
+                    <div class="col-md-7">
+                        <input type="text" class="form-control" name="q345" [(ngModel)]="form.questions[345].answer"/>
+                    </div>
+            </div>
+ 
+            <div class="checkbox row">
+                    <div class="col-md-5 group">
+                        <label><input type="checkbox" name="q346" [(ngModel)]="form.questions[346].checked"><span>{{form.questions[346].question}}</span></label>
+                    </div>
+                    <div class="col-md-7">
+                        <input type="text" class="form-control" name="q347" [(ngModel)]="form.questions[347].answer"/>
+                    </div>
+            </div>
+            <div class="checkbox row">
+                    <div class="col-md-5 group">
+                        <label><input type="checkbox" name="q348" [(ngModel)]="form.questions[348].checked"><span>{{form.questions[348].question}}</span></label>
+                    </div>
+                    <div class="col-md-7">
+                        <input type="text" class="form-control" name="q349" [(ngModel)]="form.questions[349].answer"/>
+                    </div>
+            </div>
+ 
+            <div class="checkbox">
+                    <label *ngFor="let question of form.questions.slice(350, 357)">
+                        <input type="checkbox" name="{{'q' + question.index}}" [(ngModel)]="question.checked"> 
+                        <span>{{question.question}}</span>
+                    </label>
+                </div>
 
             <label class="section">Kinetic/functional activities:</label>
 
