@@ -101,11 +101,11 @@
                     [(ngModel)]="form.questions[68].answer"></textarea>
             </div>
 
-            <label class="subHeader">Objective:</label>         
-                <div class="col-md-2">
-                    <label>Treatment Today:</label>
-                </div>
+            <label class="subHeader">Objective:</label> 
+            
             <div class="form-group">
+                <label class="section">{{form.questions[69].question}}</label>
+
                 <textarea class="form-control" rows="3" name="q69" 
                     [(ngModel)]="form.questions[69].answer"></textarea>
             </div>
@@ -685,16 +685,153 @@
                 [(ngModel)]="form.questions[333].answer"></textarea>
             </div>
 
-             <label class="section">Therapeutic exercises:</label>
+             <label class="section">Therapeutic exercises:</label>  
 
-             <div class="checkbox">
-                <label *ngFor="let question of form.questions.slice(500, 502)">
+             <div class="checkbox" style="padding-bottom: 20px;">
+                <label *ngFor="let question of form.questions.slice(477, 482)">
                     <input type="checkbox" name="{{'q' + question.index}}" [(ngModel)]="question.checked"> 
                     <span>{{question.question}}</span>
                 </label>
             </div>
 
+            <div class="checkbox row">
+                <div class="col-md-5 group">
+                    <label><input type="checkbox" name="q482" [(ngModel)]="form.questions[482].checked"><span>{{form.questions[482].question}}</span></label>
+                </div>
+                <div class="col-md-7">
+                    <input type="text" class="form-control" name="q483" [(ngModel)]="form.questions[483].answer"/>
+                </div>
+            </div>
 
+            <div class="checkbox row">
+                <div class="col-md-5 group">
+                    <label><input type="checkbox" name="q484" [(ngModel)]="form.questions[484].checked"><span>{{form.questions[484].question}}</span></label>
+                </div>
+                <div class="col-md-7">
+                    <input type="text" class="form-control" name="q485" [(ngModel)]="form.questions[485].answer"/>
+                </div>
+            </div>
+
+            <div class="checkbox row">
+                <div class="col-md-5 group">
+                    <label><input type="checkbox" name="q486" [(ngModel)]="form.questions[486].checked"><span>{{form.questions[486].question}}</span></label>
+                </div>
+                <div class="col-md-7">
+                    <input type="text" class="form-control" name="q487" [(ngModel)]="form.questions[487].answer"/>
+                </div>
+            </div>
+
+            <div class="checkbox row">
+                <div class="col-md-5 group">
+                    <label><input type="checkbox" name="q488" [(ngModel)]="form.questions[488].checked"><span>{{form.questions[488].question}}</span></label>
+                </div>
+                <div class="col-md-7">
+                    <input type="text" class="form-control" name="q489" [(ngModel)]="form.questions[489].answer"/>
+                </div>
+            </div>
+
+            <div class="checkbox row">
+                <div class="col-md-5 group">
+                    <label><input type="checkbox" name="q490" [(ngModel)]="form.questions[490].checked"><span>{{form.questions[490].question}}</span></label>
+                </div>
+                <div class="col-md-7">
+                    <input type="text" class="form-control" name="q491" [(ngModel)]="form.questions[491].answer"/>
+                </div>
+            </div>
+
+            <div class="checkbox row">
+                <div class="col-md-5 group">
+                    <label><input type="checkbox" name="q492" [(ngModel)]="form.questions[492].checked"><span>{{form.questions[492].question}}</span></label>
+                </div>
+                <div class="col-md-7">
+                    <input type="text" class="form-control" name="q493" [(ngModel)]="form.questions[493].answer"/>
+                </div>
+            </div>
+
+            <div class="checkbox">
+                <label *ngFor="let question of form.questions.slice(494, 501)">
+                    <input type="checkbox" name="{{'q' + question.index}}" [(ngModel)]="question.checked"> 
+                    <span>{{question.question}}</span>
+                </label>
+            </div>
+
+            <div class="form-group">
+                <textarea class="form-control" rows="3" name="q501" [(ngModel)]="form.questions[501].answer"></textarea>
+            </div>
+
+            <div class="checkbox row">
+                <div class="col-md-5 group">
+                    <label><input type="checkbox" name="q502" [(ngModel)]="form.questions[502].checked"><span>{{form.questions[502].question}}</span></label>
+                </div>
+                <div class="col-md-7">
+                    <input type="text" class="form-control" name="q503" [(ngModel)]="form.questions[503].answer"/>
+                </div>
+            </div>
+
+            <div class="checkbox row">
+                <div class="col-md-5 group">
+                    <label><input type="checkbox" name="q504" [(ngModel)]="form.questions[504].checked"><span>{{form.questions[504].question}}</span></label>
+                </div>
+                <div class="col-md-7">
+                    <input type="text" class="form-control" name="q505" [(ngModel)]="form.questions[505].answer"/>
+                </div>
+            </div>
+
+            <div class="checkbox row">
+                <div class="col-md-5 group">
+                    <label><input type="checkbox" name="q506" [(ngModel)]="form.questions[506].checked"><span>{{form.questions[506].question}}</span></label>
+                </div>
+                <div class="col-md-7">
+                    <input type="text" class="form-control" name="q507" [(ngModel)]="form.questions[507].answer"/>
+                </div>
+            </div>
+
+            <div class="checkbox row">
+                <div class="col-md-5 group">
+                    <label><input type="checkbox" name="q508" [(ngModel)]="form.questions[508].checked"><span>{{form.questions[508].question}}</span></label>
+                </div>
+                <div class="col-md-7">
+                    <input type="text" class="form-control" name="q509" [(ngModel)]="form.questions[509].answer"/>
+                </div>
+            </div>
+
+            <div class="checkbox row">
+                <div class="col-md-5 group">
+                    <label><input type="checkbox" name="q510" [(ngModel)]="form.questions[510].checked"><span>{{form.questions[510].question}}</span></label>
+                </div>
+                <div class="col-md-7">
+                    <input type="text" class="form-control" name="q511" [(ngModel)]="form.questions[511].answer"/>
+                </div>
+            </div>
+
+            <div class="checkbox row">
+                <div class="col-md-5 group">
+                    <label><input type="checkbox" name="q512" [(ngModel)]="form.questions[512].checked"><span>{{form.questions[512].question}}</span></label>
+                </div>
+                <div class="col-md-7">
+                    <input type="text" class="form-control" name="q513" [(ngModel)]="form.questions[513].answer"/>
+                </div>
+            </div>
+
+            <div class="checkbox row">
+                <div class="col-md-5 group">
+                    <label><input type="checkbox" name="q514" [(ngModel)]="form.questions[514].checked"><span>{{form.questions[514].question}}</span></label>
+                </div>
+                <div class="col-md-7">
+                    <input type="text" class="form-control" name="q515" [(ngModel)]="form.questions[515].answer"/>
+                </div>
+            </div>
+
+            <div class="checkbox">
+                <label *ngFor="let question of form.questions.slice(516, 523)">
+                    <input type="checkbox" name="{{'q' + question.index}}" [(ngModel)]="question.checked"> 
+                    <span>{{question.question}}</span>
+                </label>
+            </div>
+
+            <div class="form-group">
+                <textarea class="form-control" rows="3" name="q523" [(ngModel)]="form.questions[523].answer"></textarea>
+            </div>
 
             <label class="section">Patient education:</label>
 
