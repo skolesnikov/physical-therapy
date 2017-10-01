@@ -10,6 +10,8 @@ import { FormThreeEditComponent } from './forms/form-3-edit.component';
 import { FormThreePrintComponent } from './forms/form-3-print.component';
 import { FormFourEditComponent } from './forms/form-4-edit.component';
 import { FormFourPrintComponent } from './forms/form-4-print.component';
+import { FormXEditComponent } from './forms/form-x-edit.component';
+import { FormXPrintComponent } from './forms/form-x-print.component';
 import { PrintGuard } from '../guards/print-guard.service';
 
 const routes: Routes = [
@@ -28,6 +30,9 @@ const routes: Routes = [
   { path: 'form-4-edit/:id/:patientId', component: FormFourEditComponent },
   { path: 'form-4-edit/:id', component: FormFourEditComponent },
   { path: 'form-4-print/:id', component: FormFourPrintComponent, canActivate: [ PrintGuard] },
+  { path: 'form-x-edit/:formTypeId/:id/:patientId', component: FormXEditComponent },
+  { path: 'form-x-edit/:formTypeId/:id', component: FormXEditComponent },
+  { path: 'form-x-print/:id', component: FormXPrintComponent, canActivate: [ PrintGuard] },
   { path: '**', pathMatch: 'full', component: DashboardComponent }
 ];
 

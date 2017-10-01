@@ -1,0 +1,15 @@
+<div *ngIf="form" class="printPreview">
+    <div class="row">
+        <div class="col-xs-2 h4label"><label>Date:</label></div>
+        <div class="col-xs-10"><h4>{{form.formDate | date:'fullDate'}}</h4></div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-2 h4label"><label>Patient Name:</label></div>
+        <div class="col-xs-10" *ngIf="patient"><h4>{{patient.lastName}}, {{patient.firstName}}</h4></div>
+    </div>    
+
+    <div class="multiline marginalized">{{form.questions[0].answer}}</div>
+
+    <label class="signature">Natalia Gerachenko, LPT, MPT, BS, CLT</label>
+</div>

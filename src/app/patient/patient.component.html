@@ -12,9 +12,12 @@
 
     <div class="panel-body">
         <div *ngFor='let form of forms | formFilter:patient.id '>
-            <a [routerLink]="['/form-' + form.formTypeId + '-edit', form.id]">
+            <a *ngIf='form.formTypeId < 100' [routerLink]="['/form-' + form.formTypeId + '-edit', form.id]">
                 {{form.formTypeName}} : {{form.formDate | date:'fullDate'}}
-            </a>            
+            </a>   
+            <a *ngIf='form.formTypeId >= 100' [routerLink]="['/form-x-edit', form.formTypeId, form.id]">
+                {{form.formTypeName}} : {{form.formDate | date:'fullDate'}}
+            </a>          
         </div>
 
         <div *ngIf='!(forms && forms.length)'>No records</div>
@@ -37,6 +40,9 @@
         </a>    
         <a class="btn btn-primary" (click)="onAdd(4)">
             <i class="glyphicon glyphicon-plus"></i> Shoulder
+        </a>
+        <a class="btn btn-primary" (click)="onAdd(100)">
+            <i class="glyphicon glyphicon-plus"></i> Blank Note
         </a>
     </div>
 </div>

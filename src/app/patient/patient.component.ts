@@ -53,6 +53,13 @@ export class PatientComponent implements OnInit, OnDestroy {
     }
 
     onAdd(formTypeId: number): void {
-        this.router.navigate([`/form-${formTypeId}-edit/0/${this.patient.id}`]);
+        if (formTypeId >= 100)
+        {
+            this.router.navigate([`/form-x-edit/${formTypeId}/0/${this.patient.id}`]);
+        }
+        else
+        {
+            this.router.navigate([`/form-${formTypeId}-edit/0/${this.patient.id}`]);
+        }        
     }
 }
