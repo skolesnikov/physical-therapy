@@ -66,14 +66,14 @@
         </a>
     </div>   
 
-    <div class="panel-body">       
-
+    <div class="panel-body">
         <div class="form-group">
-            <textarea class="form-control" rows="20" name="q443"
-                *ngIf='form.questions.length == 1'
+            <textarea class="form-control" rows="20" name="q0"
+                *ngIf='form.questions.length == 1' [attr.maxLength]="4000"
                     [(ngModel)]="form.questions[0].answer"></textarea>
         </div>
 
+        <div>{{form.questions[0].answer | countdown:4000}} characters remaining</div>
     </div>
 
     <div *ngFor="let alert of alerts">

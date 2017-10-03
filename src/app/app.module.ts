@@ -20,6 +20,7 @@ import { PatientService } from '../services/patient.service';
 import { FormService } from '../services/form.service';
 import { PatientFilterPipe } from '../pipes/patient-filter.pipe';
 import { FormFilterPipe } from '../pipes/form-filter.pipe';
+import { CountdownPipe } from '../pipes/countdown.pipe';
 import { DatepickerModule } from 'ngx-bootstrap/datepicker';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { AlertModule } from 'ngx-bootstrap/alert';
@@ -39,9 +40,10 @@ import { TypeaheadModule } from 'ngx-bootstrap/typeahead';
     FormFourEditComponent,  
     FormFourPrintComponent, 
     FormXEditComponent,  
-    FormXPrintComponent, 
+    FormXPrintComponent,
     PatientFilterPipe,
-    FormFilterPipe
+    FormFilterPipe,
+    CountdownPipe
   ],
   imports: [
     BrowserModule,
