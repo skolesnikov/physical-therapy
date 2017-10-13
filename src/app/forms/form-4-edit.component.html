@@ -170,7 +170,7 @@
         <label class="section">ROM:</label>
         
         <div class="checkbox">
-            <label *ngFor="let question of form.questions.slice(177, 195)">
+            <label *ngFor="let question of form.questions.slice(177, 193)">
                 <input type="checkbox" name="{{'q' + question.index}}" [(ngModel)]="question.checked"> 
                 <span>{{question.question}}</span>
             </label>
