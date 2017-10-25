@@ -25,6 +25,7 @@ import { DatepickerModule } from 'ngx-bootstrap/datepicker';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { AlertModule } from 'ngx-bootstrap/alert';
 import { TypeaheadModule } from 'ngx-bootstrap/typeahead';
+import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 
 @NgModule({
   declarations: [
@@ -53,7 +54,8 @@ import { TypeaheadModule } from 'ngx-bootstrap/typeahead';
     DatepickerModule.forRoot(),
     ModalModule.forRoot(),
     AlertModule.forRoot(),
-    TypeaheadModule.forRoot()
+    TypeaheadModule.forRoot(),
+    BsDropdownModule.forRoot()
   ],
   providers: [
     PatientService,
