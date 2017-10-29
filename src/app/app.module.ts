@@ -18,8 +18,10 @@ import { FormXEditComponent } from './forms/form-x-edit.component';
 import { FormXPrintComponent } from './forms/form-x-print.component';
 import { PatientService } from '../services/patient.service';
 import { FormService } from '../services/form.service';
+import { FormTypeService } from '../services/form-type.service';
 import { PatientFilterPipe } from '../pipes/patient-filter.pipe';
 import { FormFilterPipe } from '../pipes/form-filter.pipe';
+import { FormTypeFilterPipe } from '../pipes/form-type-filter.pipe';
 import { CountdownPipe } from '../pipes/countdown.pipe';
 import { DatepickerModule } from 'ngx-bootstrap/datepicker';
 import { ModalModule } from 'ngx-bootstrap/modal';
@@ -44,6 +46,7 @@ import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
     FormXPrintComponent,
     PatientFilterPipe,
     FormFilterPipe,
+    FormTypeFilterPipe,
     CountdownPipe
   ],
   imports: [
@@ -59,7 +62,8 @@ import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
   ],
   providers: [
     PatientService,
-    FormService
+    FormService,
+    FormTypeService
   ],
   bootstrap: [AppComponent]
 })

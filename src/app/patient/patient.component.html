@@ -11,7 +11,7 @@
     </div>
 
     <div class="panel-body">
-        <div *ngFor='let form of forms | formFilter:patient.id '>
+        <div *ngFor='let form of forms | formFilter:patient.id'>
             <a *ngIf='form.formTypeId < 100' [routerLink]="['/form-' + form.formTypeId + '-edit', form.id]">
                 {{form.formTypeName}} : {{form.formDate | date:'fullDate'}}
             </a>   
@@ -29,21 +29,12 @@
         <a class="btn btn-default" (click)="onBack()">
             <i class="glyphicon glyphicon-chevron-left"></i> Back
         </a>
-        <a class="btn btn-primary" (click)="onAdd(1)">
-            <i class="glyphicon glyphicon-plus"></i> Neck/UB
-        </a>
-        <a class="btn btn-primary" (click)="onAdd(2)">
-            <i class="glyphicon glyphicon-plus"></i> Low Back
-        </a>
-        <a class="btn btn-primary" (click)="onAdd(3)">
-            <i class="glyphicon glyphicon-plus"></i> Neck/LB
-        </a>    
-        <a class="btn btn-primary" (click)="onAdd(4)">
-            <i class="glyphicon glyphicon-plus"></i> Shoulder
-        </a>
-        <a class="btn btn-primary" (click)="onAdd(100)">
-            <i class="glyphicon glyphicon-plus"></i> Blank Note
-        </a>
+
+        <span *ngFor='let formType of formTypes | formTypeFilter:1:4'>
+            <a  class="btn btn-primary" (click)="onAdd(formType.formTypeId)">
+                <i class="glyphicon glyphicon-plus"></i> {{noSoap(formType.formTypeName)}}
+            </a>
+        </span>        
 
         <div class="btn-group" dropdown>
             <button dropdownToggle type="button" class="btn btn-primary dropdown-toggle">
@@ -52,29 +43,9 @@
             <ul *dropdownMenu class="dropdown-menu" role="menu">
                 <li role="menuitem"><a class="dropdown-item" (click)="onAdd(100)">Blank Note</a></li>
                 <li class="divider dropdown-divider"></li>
-                <li role="menuitem"><a class="dropdown-item"(click)="onAdd(101)">Back Eval</a></li>
-                <li role="menuitem"><a class="dropdown-item"(click)="onAdd(102)">Balance Geriatric Eval</a></li>
-                <li role="menuitem"><a class="dropdown-item"(click)="onAdd(103)">Elbow Lateral Epicondylitis  Eval</a></li>
-                <li role="menuitem"><a class="dropdown-item"(click)="onAdd(104)">Elbow Medial Epicondylitis  Eval</a></li>
-                <li role="menuitem"><a class="dropdown-item"(click)="onAdd(105)">Foot and Ankle Eval PFT and ACTN</a></li>
-                <li role="menuitem"><a class="dropdown-item"(click)="onAdd(106)">Frozen Shoulder Eval</a></li>
-                <li role="menuitem"><a class="dropdown-item"(click)="onAdd(107)">Hand and Wrist Eval</a></li>
-                <li role="menuitem"><a class="dropdown-item"(click)="onAdd(108)">Hip Bursitis Eval</a></li>
-                <li role="menuitem"><a class="dropdown-item"(click)="onAdd(109)">Hip Eval Basic</a></li>
-                <li role="menuitem"><a class="dropdown-item"(click)="onAdd(110)">Knee Eval Basic</a></li>
-                <li role="menuitem"><a class="dropdown-item"(click)="onAdd(111)">Knee PFD Eval</a></li>
-                <li role="menuitem"><a class="dropdown-item"(click)="onAdd(112)">MC Eval Basic</a></li>
-                <li role="menuitem"><a class="dropdown-item"(click)="onAdd(113)">MC LB Eval</a></li>
-                <li role="menuitem"><a class="dropdown-item"(click)="onAdd(114)">MC Neck Eval</a></li>
-                <li role="menuitem"><a class="dropdown-item"(click)="onAdd(115)">Neck Eval</a></li>
-                <li role="menuitem"><a class="dropdown-item"(click)="onAdd(116)">Neck and LB Eval</a></li>
-                <li role="menuitem"><a class="dropdown-item"(click)="onAdd(117)">Shoulder Impingement Eval</a></li>
-                <li role="menuitem"><a class="dropdown-item"(click)="onAdd(118)">Shoulder OA Eval</a></li>
-                <li role="menuitem"><a class="dropdown-item"(click)="onAdd(119)">Soap Foot and Ankle</a></li>
-                <li role="menuitem"><a class="dropdown-item"(click)="onAdd(120)">Soap Hand and Wrist</a></li>
-                <li role="menuitem"><a class="dropdown-item"(click)="onAdd(121)">Soap Knee</a></li>
-                <li role="menuitem"><a class="dropdown-item"(click)="onAdd(122)">Soap Lateral Epicondylitis</a></li>
-                <li role="menuitem"><a class="dropdown-item"(click)="onAdd(123)">Soap Medial Epicondylitis</a></li>                    
+                <li *ngFor='let formType of formTypes | formTypeFilter:101:123' role="menuitem">
+                    <a class="dropdown-item"(click)="onAdd(formType.formTypeId)">{{formType.formTypeName}}</a>
+                </li>                
             </ul>
         </div>
     </div>     
