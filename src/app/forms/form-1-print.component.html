@@ -145,64 +145,21 @@
     </div>
     
     <div *ngIf="getAnswers(form.questions.slice(156, 198))" class="section">
-        <label>Joint mobilizations:</label> 
-        
+        <label>Joint mobilizations:</label>         
         {{getAnswers(form.questions.slice(156, 164))}}
-
-        <span *ngIf="getAnswers(form.questions.slice(164, 166))">
-            ({{getAnswers(form.questions.slice(164, 166))}})
-        </span>
-
-        <span *ngIf="getAnswers(form.questions.slice(156, 166)) && getAnswers(form.questions.slice(166, 171))">,</span>
-
-        {{getAnswers(form.questions.slice(166, 169))}}
-
-        <span *ngIf="getAnswers(form.questions.slice(169, 171))">
-            ({{getAnswers(form.questions.slice(169, 171))}})
-        </span>
-
-        <span *ngIf="getAnswers(form.questions.slice(156, 171)) && getAnswers(form.questions.slice(171, 176))">,</span>
-
+        <span *ngIf="getAnswers(form.questions.slice(164, 166))">({{getAnswers(form.questions.slice(164, 166))}})</span><span *ngIf="getAnswers(form.questions.slice(156, 166)) && getAnswers(form.questions.slice(166, 171))">,</span>
+        {{getAnswers(form.questions.slice(166, 169))}} 
+        <span *ngIf="getAnswers(form.questions.slice(169, 171))">({{getAnswers(form.questions.slice(169, 171))}})</span><span *ngIf="getAnswers(form.questions.slice(156, 171)) && getAnswers(form.questions.slice(171, 176))">,</span>
         {{getAnswers(form.questions.slice(171, 174))}}
-
-        <span *ngIf="getAnswers(form.questions.slice(174, 176))">
-            ({{getAnswers(form.questions.slice(174, 176))}})
-        </span>
-
-        <span *ngIf="getAnswers(form.questions.slice(156, 176)) && getAnswers(form.questions.slice(176, 181))">,</span>
-
+        <span *ngIf="getAnswers(form.questions.slice(174, 176))">({{getAnswers(form.questions.slice(174, 176))}})</span><span *ngIf="getAnswers(form.questions.slice(156, 176)) && getAnswers(form.questions.slice(176, 181))">,</span>
         {{getAnswers(form.questions.slice(176, 179))}}
-
-        <span *ngIf="getAnswers(form.questions.slice(179, 181))">
-            ({{getAnswers(form.questions.slice(179, 181))}})
-        </span>
-
-        <span *ngIf="getAnswers(form.questions.slice(156, 181)) && getAnswers(form.questions.slice(181, 186))">,</span>
-
+        <span *ngIf="getAnswers(form.questions.slice(179, 181))">({{getAnswers(form.questions.slice(179, 181))}})</span><span *ngIf="getAnswers(form.questions.slice(156, 181)) && getAnswers(form.questions.slice(181, 186))">,</span>
         {{getAnswers(form.questions.slice(181, 184))}}
-
-        <span *ngIf="getAnswers(form.questions.slice(184, 186))">
-            ({{getAnswers(form.questions.slice(184, 186))}})
-        </span>
-
-        <span *ngIf="getAnswers(form.questions.slice(156, 186)) && getAnswers(form.questions.slice(186, 191))">,</span>
-
+        <span *ngIf="getAnswers(form.questions.slice(184, 186))">({{getAnswers(form.questions.slice(184, 186))}})</span><span *ngIf="getAnswers(form.questions.slice(156, 186)) && getAnswers(form.questions.slice(186, 191))">,</span>
         {{getAnswers(form.questions.slice(186, 189))}}
-
-        <span *ngIf="getAnswers(form.questions.slice(189, 191))">
-            ({{getAnswers(form.questions.slice(189, 191))}})
-        </span>
-
-        <span *ngIf="getAnswers(form.questions.slice(156, 191)) && getAnswers(form.questions.slice(191, 196))">,</span>
-
+        <span *ngIf="getAnswers(form.questions.slice(189, 191))">({{getAnswers(form.questions.slice(189, 191))}})</span><span *ngIf="getAnswers(form.questions.slice(156, 191)) && getAnswers(form.questions.slice(191, 196))">,</span>
         {{getAnswers(form.questions.slice(191, 194))}}
-
-        <span *ngIf="getAnswers(form.questions.slice(194, 196))">
-            ({{getAnswers(form.questions.slice(194, 196))}})
-        </span>
-
-        <span *ngIf="getAnswers(form.questions.slice(156, 196)) && getAnswers(form.questions.slice(196, 198))">,</span>
-
+        <span *ngIf="getAnswers(form.questions.slice(194, 196))">({{getAnswers(form.questions.slice(194, 196))}})</span><span *ngIf="getAnswers(form.questions.slice(156, 196)) && getAnswers(form.questions.slice(196, 198))">,</span>
         {{getAnswers(form.questions.slice(196, 198))}}
     </div>
 

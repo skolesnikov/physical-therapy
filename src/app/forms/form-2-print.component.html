@@ -132,11 +132,11 @@
     <div *ngIf="getAnswers(form.questions.slice(149, 170))" class="section">
         <label>Joint mobilizations:</label>
         {{getAnswers(form.questions.slice(149, 157))}}
-        <span *ngIf="getAnswers(form.questions.slice(157, 159))">({{getAnswers(form.questions.slice(157, 159))}})</span><span *ngIf="getAnswers(form.questions.slice(149, 159)) || getAnswers(form.questions.slice(159, 170))">,</span>
+        <span *ngIf="getAnswers(form.questions.slice(157, 159))">({{getAnswers(form.questions.slice(157, 159))}})</span><span *ngIf="getAnswers(form.questions.slice(149, 159)) && getAnswers(form.questions.slice(159, 164))">,</span>
         {{getAnswers(form.questions.slice(159, 162))}}
-        <span *ngIf="getAnswers(form.questions.slice(162, 164))">({{getAnswers(form.questions.slice(162, 164))}})</span><span *ngIf="getAnswers(form.questions.slice(149, 164)) || getAnswers(form.questions.slice(164, 170))">,</span>
+        <span *ngIf="getAnswers(form.questions.slice(162, 164))">({{getAnswers(form.questions.slice(162, 164))}})</span><span *ngIf="getAnswers(form.questions.slice(149, 164)) && getAnswers(form.questions.slice(164, 168))">,</span>
         {{getAnswers(form.questions.slice(164, 166))}}
-        <span *ngIf="getAnswers(form.questions.slice(166, 168))">({{getAnswers(form.questions.slice(166, 168))}})</span><span *ngIf="getAnswers(form.questions.slice(149, 168)) || getAnswers(form.questions.slice(168, 170))">,</span>
+        <span *ngIf="getAnswers(form.questions.slice(166, 168))">({{getAnswers(form.questions.slice(166, 168))}})</span><span *ngIf="getAnswers(form.questions.slice(149, 168)) && getAnswers(form.questions.slice(168, 170))">,</span>
         {{getAnswers(form.questions.slice(168, 170))}}
     </div>
 
