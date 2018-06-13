@@ -198,6 +198,10 @@
     <div *ngIf="getAnswers(form.questions.slice(266, 271))" class="section">
         <label>Modalities:</label> {{getAnswers(form.questions.slice(266, 271))}}
     </div>
+
+    <div *ngIf="form.questions[349].answer" class="section">
+        {{form.questions[349].answer}}
+    </div>
     
     <label class="subHeader">Assessment:</label>
     
